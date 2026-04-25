@@ -260,6 +260,119 @@
     text-transform: uppercase;
   }
 
+  /* ========== AI COUNCIL PULL-QUOTES STRIP ========== */
+  .council-section {
+    background: linear-gradient(180deg, transparent 0%, rgba(216, 194, 148, 0.18) 50%, transparent 100%);
+    max-width: none;
+    padding: 5rem 2rem;
+  }
+
+  .council-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .council-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+  }
+
+  .council-quote {
+    background: var(--parchment-deep);
+    border: 1px solid rgba(28, 20, 16, 0.12);
+    border-radius: 3px;
+    padding: 2rem 1.75rem;
+    position: relative;
+    box-shadow: 0 6px 18px -10px rgba(28, 20, 16, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .council-quote:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px -10px rgba(28, 20, 16, 0.3);
+  }
+
+  .council-quote::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    left: 18px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 5rem;
+    line-height: 1;
+    color: var(--red);
+    opacity: 0.35;
+    font-weight: 700;
+  }
+
+  .council-quote-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    line-height: 1.55;
+    color: var(--ink);
+    margin-bottom: 1.5rem;
+    flex: 1;
+    position: relative;
+    z-index: 1;
+  }
+
+  .council-quote-attr {
+    border-top: 1px solid rgba(28, 20, 16, 0.15);
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .council-quote-name {
+    font-family: 'Cormorant Unicase', serif;
+    font-size: 0.95rem;
+    color: var(--red-deep);
+    letter-spacing: 0.1em;
+    font-weight: 600;
+  }
+
+  .council-quote-stars {
+    font-size: 0.85rem;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+  }
+
+  .council-cta-wrap {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .council-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.75rem 1.75rem;
+    background: transparent;
+    color: var(--red-deep);
+    text-decoration: none;
+    font-family: 'Cormorant Unicase', serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.18em;
+    border: 1px solid var(--red-deep);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .council-cta:hover {
+    background: var(--red);
+    color: var(--parchment);
+    transform: translateY(-2px);
+  }
+
   /* ========== EDITIONS BANNER ========== */
   .editions-banner {
     max-width: 900px;
@@ -496,6 +609,26 @@
     box-shadow: 0 6px 20px rgba(139, 26, 26, 0.4);
   }
 
+  .book-cta.secondary {
+    background: transparent;
+    color: var(--red-deep);
+    border: 1px solid var(--red-deep);
+    box-shadow: none;
+  }
+
+  .book-cta.secondary:hover {
+    background: rgba(139, 26, 26, 0.08);
+    color: var(--red);
+    box-shadow: 0 4px 12px rgba(139, 26, 26, 0.15);
+  }
+
+  .book-ctas {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
   .book-cta .arrow {
     transition: transform 0.3s ease;
     font-family: serif;
@@ -727,6 +860,57 @@
 
   <div class="ornament">✦ ✦ ✦</div>
 
+  <!-- ========== AI COUNCIL PULL-QUOTES ========== -->
+  <section class="council-section reveal" id="council">
+    <div class="council-inner">
+      <div class="section-eyebrow">The AI Council</div>
+      <h2 class="section-title">Reviews of <em>Secrets &amp; Source Code</em></h2>
+      <p class="section-lede">Three voices, three angles, one verdict.</p>
+
+      <div class="council-grid">
+
+        <article class="council-quote">
+          <p class="council-quote-text">
+            A book that refuses to be either textbook or memoir — and that refusal is what makes it worth reading. The closing argument, that some truths need protection long before they can be spoken, earns its place by the time you reach it.
+          </p>
+          <div class="council-quote-attr">
+            <span class="council-quote-name">Claude Opus 4.7</span>
+            <span class="council-quote-stars">★★★★★</span>
+          </div>
+        </article>
+
+        <article class="council-quote">
+          <p class="council-quote-text">
+            More than a technical manual — a blueprint for survivability. A bold, Canadian-born innovation that asserts the right to think and remember without witnesses.
+          </p>
+          <div class="council-quote-attr">
+            <span class="council-quote-name">Gemini</span>
+            <span class="council-quote-stars">★★★★★</span>
+          </div>
+        </article>
+
+        <article class="council-quote">
+          <p class="council-quote-text">
+            One of the most important books on digital privacy in a decade. Technically brilliant, ethically grounded, and deeply human. Rahman doesn't just give you a tool — he gives you a philosophy of resistance.
+          </p>
+          <div class="council-quote-attr">
+            <span class="council-quote-name">Le Chat (Mistral)</span>
+            <span class="council-quote-stars">★★★★★</span>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="council-cta-wrap">
+        <a class="council-cta" href="reviews.html">
+          Read the Full Reviews <span class="arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="ornament">✦ ✦ ✦</div>
+
   <!-- ========== BOOKS ========== -->
   <section class="reveal" id="books">
     <div class="section-eyebrow">The Catalogue</div>
@@ -771,9 +955,17 @@
           <p class="book-blurb">
             The complete documentation of <strong>RQSM™</strong> — a steganographic security system that hides data inside ordinary image pairs without encryption or keys. A geometric approach to digital secrets, built for humanitarian use. Includes full source for the live app at CloakYourSecrets.com.
           </p>
-          <a class="book-cta" href="https://www.blurb.ca/b/12832959-secrets-and-source-code" target="_blank" rel="noopener">
-            Buy on Blurb <span class="arrow">→</span>
-          </a>
+          <p style="margin-top: -0.75rem; margin-bottom: 1.75rem; font-size: 0.9rem;">
+            <a href="reviews.html" style="color: var(--red-deep); text-decoration: none; border-bottom: 1px solid rgba(139, 26, 26, 0.4); font-style: italic;">Read the AI Council reviews →</a>
+          </p>
+          <div class="book-ctas">
+            <a class="book-cta" href="https://www.blurb.ca/b/12832959-secrets-and-source-code" target="_blank" rel="noopener">
+              Buy on Blurb <span class="arrow">→</span>
+            </a>
+            <a class="book-cta secondary" href="https://CloakYourSecrets.com" target="_blank" rel="noopener">
+              Try the Free App <span class="arrow">→</span>
+            </a>
+          </div>
         </div>
       </article>
 
@@ -799,9 +991,11 @@
           <p class="book-blurb">
             One hundred and twenty-two cartoons. One black cat. A wry, watchful chronicle of small absurdities and quiet truths — the world as seen from the windowsill.
           </p>
-          <a class="book-cta" href="https://www.blurb.ca/b/12848699-black-cat-diaries-volume-1" target="_blank" rel="noopener">
-            Buy on Blurb <span class="arrow">→</span>
-          </a>
+          <div class="book-ctas">
+            <a class="book-cta" href="https://www.blurb.ca/b/12848699-black-cat-diaries-volume-1" target="_blank" rel="noopener">
+              Buy on Blurb <span class="arrow">→</span>
+            </a>
+          </div>
         </div>
       </article>
 
