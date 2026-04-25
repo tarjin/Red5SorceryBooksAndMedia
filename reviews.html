@@ -159,6 +159,103 @@
     font-family: serif;
   }
 
+  /* ========== FEATURED NOTEBOOKLM VIDEO ========== */
+  .featured-review {
+    max-width: 900px;
+    margin: 3rem auto 4rem;
+    padding: 0 2rem;
+  }
+
+  .featured-frame {
+    background: var(--parchment-deep);
+    border: 1px solid rgba(28, 20, 16, 0.15);
+    border-radius: 4px;
+    padding: 2.5rem 2rem;
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.5) inset,
+      0 20px 60px -20px rgba(28, 20, 16, 0.3),
+      0 0 0 1px rgba(168, 132, 44, 0.2);
+    position: relative;
+    text-align: center;
+  }
+
+  .featured-frame::before,
+  .featured-frame::after {
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border: 2px solid var(--red);
+    opacity: 0.6;
+  }
+  .featured-frame::before {
+    top: 12px; left: 12px;
+    border-right: none; border-bottom: none;
+  }
+  .featured-frame::after {
+    bottom: 12px; right: 12px;
+    border-left: none; border-top: none;
+  }
+
+  .featured-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 0.75rem;
+  }
+
+  .featured-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: clamp(1.6rem, 3.8vw, 2.2rem);
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+  }
+
+  .featured-meta {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--ink-soft);
+    margin-bottom: 1.75rem;
+  }
+
+  .featured-video {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 2px;
+    box-shadow: 0 8px 30px -8px rgba(28, 20, 16, 0.4);
+    background: #000;
+  }
+
+  .featured-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  .featured-caption {
+    margin-top: 1.5rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 720px) {
+    .featured-review { padding: 0 1rem; margin: 2rem auto 3rem; }
+    .featured-frame { padding: 1.5rem 1rem; }
+  }
+
   /* ========== REVIEW ========== */
   .review {
     max-width: 760px;
@@ -412,8 +509,29 @@
     </p>
   </header>
 
+  <!-- ========== FEATURED: NOTEBOOKLM VIDEO REVIEW ========== -->
+  <section class="featured-review" id="notebooklm">
+    <div class="featured-frame">
+      <div class="featured-eyebrow">★ Featured Audio Review ★</div>
+      <h2 class="featured-title">A 51-Minute Conversation</h2>
+      <p class="featured-meta">NotebookLM (Google) — generated discussion of the full manuscript</p>
+      <div class="featured-video">
+        <iframe
+          src="https://www.youtube.com/embed/4EyQWS_2EoI"
+          title="NotebookLM Review of Secrets &amp; Source Code"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+      <div class="featured-caption">— Listen below, then read the written reviews —</div>
+    </div>
+  </section>
+
   <!-- ========== TABLE OF REVIEWERS ========== -->
   <nav class="toc">
+    <a href="#notebooklm">
+      NotebookLM
+      <span class="toc-stars">Audio · 51 min</span>
+    </a>
     <a href="#opus">
       Claude Opus 4.7
       <span class="toc-stars">★★★★★</span>
