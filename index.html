@@ -189,7 +189,7 @@
   }
 
   .cartoon-inner {
-    max-width: 580px;
+    max-width: 440px;
     margin: 0 auto;
   }
 
@@ -233,7 +233,7 @@
   }
 
   .cartoon-img-wrap img {
-    max-width: min(440px, 75vw);
+    max-width: min(290px, 60vw);
     width: 100%;
     height: auto;
     display: block;
@@ -515,6 +515,126 @@
     user-select: none;
   }
 
+  /* ========== SECRETS & SINS YOUTUBE SECTION ========== */
+  .sins-section {
+    margin-top: 4rem;
+    padding: 6rem 2rem 7rem;
+    max-width: none;
+    background:
+      radial-gradient(ellipse at center, #1a0a0a 0%, #050202 70%, #000 100%);
+    color: #d4c2a0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Subtle red glow at the top edge */
+  .sins-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(139, 26, 26, 0.4) 25%,
+      rgba(176, 40, 40, 0.7) 50%,
+      rgba(139, 26, 26, 0.4) 75%,
+      transparent 100%);
+  }
+
+  .sins-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .sins-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: rgba(176, 40, 40, 0.85);
+    margin-bottom: 2rem;
+  }
+
+  .sins-banner-wrap {
+    display: block;
+    margin: 0 auto 2.5rem;
+    max-width: 900px;
+    box-shadow:
+      0 30px 80px -20px rgba(139, 26, 26, 0.4),
+      0 10px 40px -10px rgba(0, 0, 0, 0.8);
+    border-radius: 2px;
+    overflow: hidden;
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+                box-shadow 0.6s ease;
+  }
+
+  .sins-banner-wrap:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 40px 100px -20px rgba(176, 40, 40, 0.55),
+      0 15px 50px -10px rgba(0, 0, 0, 0.9);
+  }
+
+  .sins-banner-wrap img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .sins-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.25rem;
+    color: rgba(212, 194, 160, 0.85);
+    max-width: 580px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.6;
+  }
+
+  .sins-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 1rem 2.25rem;
+    background: linear-gradient(180deg, #b02828 0%, #8b1a1a 100%);
+    color: #f4ead5;
+    text-decoration: none;
+    font-family: 'Cormorant Unicase', serif;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.2em;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    box-shadow:
+      0 8px 24px rgba(139, 26, 26, 0.5),
+      0 0 0 1px rgba(176, 40, 40, 0.4) inset;
+    border: 1px solid #6b1414;
+  }
+
+  .sins-cta:hover {
+    background: linear-gradient(180deg, #c43030 0%, #a02020 100%);
+    transform: translateY(-2px);
+    box-shadow:
+      0 12px 36px rgba(176, 40, 40, 0.7),
+      0 0 0 1px rgba(176, 40, 40, 0.6) inset;
+  }
+
+  .sins-cta-icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+  }
+
+  @media (max-width: 720px) {
+    .sins-section { padding: 4rem 1.25rem 5rem; }
+    .sins-tagline { font-size: 1.1rem; }
+  }
+
   /* ========== FOOTER ========== */
   footer {
     margin-top: 4rem;
@@ -685,6 +805,25 @@
         </div>
       </article>
 
+    </div>
+  </section>
+
+  <!-- ========== SECRETS & SINS / YOUTUBE ========== -->
+  <section class="sins-section reveal" id="secrets-and-sins">
+    <div class="sins-inner">
+      <div class="sins-eyebrow">Poetry Readings · YouTube Channel</div>
+      <a class="sins-banner-wrap" href="https://www.youtube.com/@TheSocialCredit/videos" target="_blank" rel="noopener">
+        <img src="SecretsAndSins-banner.png" alt="Secrets &amp; Sins — Art and Poetry in Dialogue, by Tarjin Rahman">
+      </a>
+      <p class="sins-tagline">
+        A series of poetry readings paired with original artwork — quiet, candlelit, and thoroughly unrepentant.
+      </p>
+      <a class="sins-cta" href="https://www.youtube.com/@TheSocialCredit/videos" target="_blank" rel="noopener">
+        <svg class="sins-cta-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+        </svg>
+        Watch on YouTube
+      </a>
     </div>
   </section>
 
