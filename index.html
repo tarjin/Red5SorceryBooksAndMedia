@@ -719,7 +719,7 @@
         </div>
         <div class="cartoon-caption">
           <span class="cartoon-day" id="cartoonDay">— Today —</span>
-          <span id="cartoonNum">№ 001 / Black Cat Diaries</span>
+          <span>From the Black Cat Diaries</span>
         </div>
       </div>
     </div>
@@ -816,7 +816,7 @@
         <img src="SecretsAndSins-banner.png" alt="Secrets &amp; Sins — Art and Poetry in Dialogue, by Tarjin Rahman">
       </a>
       <p class="sins-tagline">
-        A collection of original love poems paired with high-quality artwork — releasing December 1, 2026. In the meantime, the YouTube channel offers reflections on the meaning and themes behind each poem, with the full text in every video's description.
+        A collection of original love poems paired with high-quality artwork — releasing December 1, 2026. In the meantime, the YouTube channel features select poems with reflections on their meaning and themes, full text included in every video's description.
       </p>
       <a class="sins-cta" href="https://www.youtube.com/@TheSocialCredit/videos" target="_blank" rel="noopener">
         <svg class="sins-cta-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -851,11 +851,9 @@
 
     const img = document.getElementById('cartoonImg');
     const dayEl = document.getElementById('cartoonDay');
-    const numEl = document.getElementById('cartoonNum');
 
     if (img) img.src = `BCD-${padded}.png`;
     if (dayEl) dayEl.textContent = `— ${todayName} —`;
-    if (numEl) numEl.textContent = `№ ${padded} / Black Cat Diaries`;
   })();
 
   /* ========== REVEAL ON SCROLL ========== */
