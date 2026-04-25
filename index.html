@@ -74,7 +74,7 @@
   }
 
   .hero-letters {
-    max-width: min(720px, 90vw);
+    max-width: min(440px, 75vw);
     width: 100%;
     height: auto;
     filter: drop-shadow(0 8px 24px rgba(28, 20, 16, 0.25));
@@ -189,7 +189,7 @@
   }
 
   .cartoon-inner {
-    max-width: 1000px;
+    max-width: 760px;
     margin: 0 auto;
   }
 
@@ -234,9 +234,12 @@
 
   .cartoon-img-wrap img {
     max-width: 100%;
+    width: auto;
+    max-height: 60vh;
     height: auto;
     display: block;
     margin: 0 auto;
+    object-fit: contain;
   }
 
   .cartoon-caption {
@@ -258,6 +261,89 @@
     text-transform: uppercase;
   }
 
+  /* ========== EDITIONS BANNER ========== */
+  .editions-banner {
+    max-width: 900px;
+    margin: 0 auto 4rem;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: stretch;
+    gap: 0;
+    background: var(--parchment-deep);
+    border: 1px solid rgba(28, 20, 16, 0.15);
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px -12px rgba(28, 20, 16, 0.25);
+  }
+
+  .edition {
+    padding: 1.75rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--ink);
+    transition: background 0.3s ease;
+  }
+
+  .edition:hover {
+    background: rgba(139, 26, 26, 0.06);
+  }
+
+  .edition-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--red);
+  }
+
+  .edition-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.2;
+  }
+
+  .edition-detail {
+    font-size: 0.95rem;
+    font-style: italic;
+    color: var(--ink-soft);
+    line-height: 1.4;
+  }
+
+  .edition-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.5rem;
+    color: var(--red);
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1rem;
+    background: rgba(139, 26, 26, 0.04);
+    border-left: 1px solid rgba(28, 20, 16, 0.12);
+    border-right: 1px solid rgba(28, 20, 16, 0.12);
+    min-width: 60px;
+  }
+
+  @media (max-width: 640px) {
+    .editions-banner {
+      grid-template-columns: 1fr;
+    }
+    .edition-divider {
+      border-left: none;
+      border-right: none;
+      border-top: 1px solid rgba(28, 20, 16, 0.12);
+      border-bottom: 1px solid rgba(28, 20, 16, 0.12);
+      padding: 0.5rem;
+      min-width: auto;
+    }
+  }
+
   /* ========== BOOKS ========== */
   .books-grid {
     display: grid;
@@ -272,45 +358,89 @@
     gap: 1.5rem;
   }
 
-  .book-covers {
+  .book-flip {
+    perspective: 1600px;
+    height: 540px;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .book-flip-inner {
     position: relative;
-    height: 480px;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.9s cubic-bezier(0.23, 1, 0.32, 1);
+    transform-style: preserve-3d;
+  }
+
+  .book-flip.flipped .book-flip-inner {
+    transform: rotateY(180deg);
+  }
+
+  .book-face {
+    position: absolute;
+    inset: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    perspective: 1200px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
   }
 
-  .book-cover, .book-back {
-    position: absolute;
-    height: 100%;
+  .book-face img {
+    max-height: 100%;
+    max-width: 100%;
     width: auto;
-    max-width: 80%;
+    height: auto;
     object-fit: contain;
     box-shadow:
       0 30px 50px -20px rgba(28, 20, 16, 0.5),
       0 10px 20px -10px rgba(28, 20, 16, 0.3);
-    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1),
-                box-shadow 0.6s ease;
     border-radius: 1px;
+    transition: transform 0.4s ease;
   }
 
-  .book-cover {
-    z-index: 2;
-    transform: rotateY(-4deg) translateX(-8%);
-  }
-  .book-back {
-    z-index: 1;
-    transform: rotateY(4deg) translateX(8%);
-    opacity: 0.9;
+  .book-flip:hover .book-face img {
+    transform: translateY(-4px);
   }
 
-  .book-card:hover .book-cover {
-    transform: rotateY(-8deg) translateX(-18%) translateY(-4px);
+  .book-back-face {
+    transform: rotateY(180deg);
   }
-  .book-card:hover .book-back {
-    transform: rotateY(8deg) translateX(18%) translateY(-4px);
-    opacity: 1;
+
+  .flip-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin-top: 0.5rem;
+  }
+
+  .flip-btn {
+    background: transparent;
+    border: 1px solid rgba(28, 20, 16, 0.25);
+    color: var(--ink-soft);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 0.55rem 1.2rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-weight: 500;
+  }
+
+  .flip-btn:first-child { border-radius: 2px 0 0 2px; border-right: none; }
+  .flip-btn:last-child  { border-radius: 0 2px 2px 0; }
+
+  .flip-btn.active {
+    background: var(--red);
+    color: var(--parchment);
+    border-color: var(--red-deep);
+  }
+
+  .flip-btn:hover:not(.active) {
+    background: rgba(139, 26, 26, 0.08);
+    color: var(--red-deep);
   }
 
   .book-meta {
@@ -425,7 +555,7 @@
     .cartoon-frame { padding: 1.5rem; }
     .cartoon-img-wrap { padding: 0.75rem; }
     .books-grid { gap: 5rem; }
-    .book-covers { height: 380px; }
+    .book-flip { height: 420px; }
     .hero { padding: 3rem 1.25rem 5rem; }
     .tagline { letter-spacing: 0.3em; }
   }
@@ -452,7 +582,7 @@
       Books<span class="dot"></span>Code<span class="dot"></span>Secrets
     </div>
     <p class="hero-sub">
-      Independent literary works from Halifax — quiet truths, watchful cats, and the architecture of a quantum future.
+      Independent literary works from Halifax — quiet truths, watchful cats, and the architecture of digital secrets.
     </p>
     <div class="scroll-cue">↓ &nbsp; scroll &nbsp; ↓</div>
   </section>
@@ -482,21 +612,45 @@
   <section class="reveal" id="books">
     <div class="section-eyebrow">The Catalogue</div>
     <h2 class="section-title">Two Volumes</h2>
-    <p class="section-lede">One for the cipher. One for the cat. Both available in print from Blurb.</p>
+    <p class="section-lede">One for the cipher. One for the cat. Available in print and digital.</p>
+
+    <div class="editions-banner">
+      <a class="edition" href="https://www.blurb.ca/user/tarjin" target="_blank" rel="noopener">
+        <span class="edition-label">Print</span>
+        <span class="edition-name">Blurb</span>
+        <span class="edition-detail">Softcover editions, for those who like to hold a book.</span>
+      </a>
+      <div class="edition-divider">or</div>
+      <a class="edition" href="https://thesocialcredit.etsy.com" target="_blank" rel="noopener">
+        <span class="edition-label">Digital</span>
+        <span class="edition-name">Etsy</span>
+        <span class="edition-detail">PDF bundles &amp; more, from our store TheSocialCredit.</span>
+      </a>
+    </div>
 
     <div class="books-grid">
 
       <!-- BOOK 1: Secrets & Source Code -->
       <article class="book-card">
-        <div class="book-covers">
-          <img class="book-back" src="RQSM-Backcover.png" alt="Secrets & Source Code — back cover">
-          <img class="book-cover" src="RQSM-cover.png" alt="Secrets & Source Code — front cover">
+        <div class="book-flip" data-book="rqsm" onclick="this.classList.toggle('flipped'); syncToggle(this);">
+          <div class="book-flip-inner">
+            <div class="book-face book-front-face">
+              <img src="RQSM-cover.png" alt="Secrets & Source Code — front cover">
+            </div>
+            <div class="book-face book-back-face">
+              <img src="RQSM-Backcover.png" alt="Secrets & Source Code — back cover">
+            </div>
+          </div>
+        </div>
+        <div class="flip-toggle" data-target="rqsm">
+          <button class="flip-btn active" data-side="front">Front</button>
+          <button class="flip-btn" data-side="back">Back</button>
         </div>
         <div class="book-meta">
           <h3 class="book-title">Secrets &amp; Source Code</h3>
           <p class="book-author">by Tarjin Rahman</p>
           <p class="book-blurb">
-            The complete documentation of <strong>RQSM™</strong> — a steganographic security system that hides data inside ordinary image pairs without encryption or keys. Built for a quantum future and a humanitarian present. Includes full source for the live app at CloakYourSecrets.com.
+            The complete documentation of <strong>RQSM™</strong> — a steganographic security system that hides data inside ordinary image pairs without encryption or keys. A geometric approach to digital secrets, built for humanitarian use. Includes full source for the live app at CloakYourSecrets.com.
           </p>
           <a class="book-cta" href="https://www.blurb.ca/b/12832959-secrets-and-source-code" target="_blank" rel="noopener">
             Buy on Blurb <span class="arrow">→</span>
@@ -506,15 +660,25 @@
 
       <!-- BOOK 2: Black Cat Diaries -->
       <article class="book-card">
-        <div class="book-covers">
-          <img class="book-back" src="BCD-Backcover.png" alt="Black Cat Diaries Volume 1 — back cover">
-          <img class="book-cover" src="BCD-cover.png" alt="Black Cat Diaries Volume 1 — front cover">
+        <div class="book-flip" data-book="bcd" onclick="this.classList.toggle('flipped'); syncToggle(this);">
+          <div class="book-flip-inner">
+            <div class="book-face book-front-face">
+              <img src="BCD-cover.png" alt="Black Cat Diaries Volume 1 — front cover">
+            </div>
+            <div class="book-face book-back-face">
+              <img src="BCD-Backcover.png" alt="Black Cat Diaries Volume 1 — back cover">
+            </div>
+          </div>
+        </div>
+        <div class="flip-toggle" data-target="bcd">
+          <button class="flip-btn active" data-side="front">Front</button>
+          <button class="flip-btn" data-side="back">Back</button>
         </div>
         <div class="book-meta">
           <h3 class="book-title">Black Cat Diaries<br><em style="font-size: 0.7em; font-weight: 400;">Volume 1</em></h3>
           <p class="book-author">by Tarjin Rahman</p>
           <p class="book-blurb">
-            One hundred cartoons. One black cat. A wry, watchful chronicle of small absurdities and quiet truths — the world as seen from the windowsill.
+            One hundred and twenty-two cartoons. One black cat. A wry, watchful chronicle of small absurdities and quiet truths — the world as seen from the windowsill.
           </p>
           <a class="book-cta" href="https://www.blurb.ca/b/12848699-black-cat-diaries-volume-1" target="_blank" rel="noopener">
             Buy on Blurb <span class="arrow">→</span>
@@ -569,6 +733,40 @@
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   })();
+
+  /* ========== BOOK FLIP TOGGLE ========== */
+  // Wire up the Front/Back toggle buttons under each book.
+  document.querySelectorAll('.flip-toggle').forEach(toggle => {
+    const target = toggle.dataset.target;
+    const flipCard = document.querySelector(`.book-flip[data-book="${target}"]`);
+    toggle.querySelectorAll('.flip-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const side = btn.dataset.side;
+        if (side === 'back') {
+          flipCard.classList.add('flipped');
+        } else {
+          flipCard.classList.remove('flipped');
+        }
+        toggle.querySelectorAll('.flip-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+  });
+
+  // Keep toggle in sync when the card itself is clicked
+  function syncToggle(flipCard) {
+    const book = flipCard.dataset.book;
+    const toggle = document.querySelector(`.flip-toggle[data-target="${book}"]`);
+    if (!toggle) return;
+    const isFlipped = flipCard.classList.contains('flipped');
+    toggle.querySelectorAll('.flip-btn').forEach(b => {
+      b.classList.toggle('active',
+        (b.dataset.side === 'back' && isFlipped) ||
+        (b.dataset.side === 'front' && !isFlipped)
+      );
+    });
+  }
 </script>
 </body>
 </html>
