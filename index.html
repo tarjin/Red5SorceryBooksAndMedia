@@ -260,6 +260,23 @@
     text-transform: uppercase;
   }
 
+  /* Cards CTA beneath cartoon-of-the-day */
+  .cards-pitch {
+    margin-top: 2.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .cards-pitch-line {
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+
   /* ========== AI COUNCIL PULL-QUOTES STRIP ========== */
   .council-section {
     background: linear-gradient(180deg, transparent 0%, rgba(216, 194, 148, 0.18) 50%, transparent 100%);
@@ -855,9 +872,12 @@
           <span>From the Black Cat Diaries</span>
         </div>
       </div>
-      <p style="text-align: center; margin-top: 2rem; font-size: 1rem;">
-        <a href="cards.html" style="color: var(--red-deep); text-decoration: none; border-bottom: 1px solid rgba(139, 26, 26, 0.4); font-style: italic; padding-bottom: 2px;">Black Cat Diaries Cards →</a>
-      </p>
+      <div class="cards-pitch">
+        <p class="cards-pitch-line">The cat has a card series — drawings you won't find in the daily cartoons or the books.</p>
+        <a class="book-cta" href="cards.html">
+          Shop the Card Series <span class="arrow">→</span>
+        </a>
+      </div>
     </div>
   </section>
 
