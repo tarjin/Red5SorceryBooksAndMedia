@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Greeting Cards — Black Cat Diaries · Red5Sorcery</title>
+<meta name="description" content="Black Cat Diaries A2 greeting cards — dry, deadpan, watchful. Print-on-demand from Halifax. Sold in packs of 10 on Etsy.">
+
+<!-- Open Graph / social -->
+<meta property="og:title" content="Greeting Cards — Black Cat Diaries">
+<meta property="og:description" content="A2 greeting cards from the Black Cat Diaries series. Sold in packs of 10 on Etsy.">
+<meta property="og:image" content="https://red5sorcery.com/Red5SorceryLetters.png">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Unicase:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --parchment: #f4ead5;
+    --parchment-deep: #ead9b8;
+    --parchment-dark: #d8c294;
+    --ink: #1c1410;
+    --ink-soft: #3a2c22;
+    --red: #8b1a1a;
+    --red-deep: #6b1414;
+    --red-bright: #b02828;
+    --gold: #a8842c;
+    --shadow: rgba(28, 20, 16, 0.18);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Cormorant Garamond', 'Garamond', serif;
+    background: var(--parchment);
+    color: var(--ink);
+    font-size: 19px;
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-image:
+      radial-gradient(ellipse at 20% 10%, rgba(139, 26, 26, 0.04) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 80%, rgba(168, 132, 44, 0.06) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 50%, transparent 60%, rgba(28, 20, 16, 0.04) 100%);
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.4;
+    z-index: 1;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.08 0 0 0 0 0.06 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  main { position: relative; z-index: 2; }
+
+  /* ========== TOP NAV / BACK LINK ========== */
+  .top-nav {
+    padding: 1.5rem 2rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .back-link {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.2s, color 0.2s;
+  }
+
+  .back-link:hover {
+    opacity: 1;
+    color: var(--red-deep);
+  }
+
+  .back-link .arrow {
+    display: inline-block;
+    transition: transform 0.2s;
+  }
+
+  .back-link:hover .arrow {
+    transform: translateX(-4px);
+  }
+
+  /* ========== HEADER ========== */
+  .page-header {
+    text-align: center;
+    padding: 4rem 2rem 3rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .page-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .page-eyebrow::before,
+  .page-eyebrow::after {
+    content: '';
+    width: 60px;
+    height: 1px;
+    background: var(--ink);
+    opacity: 0.25;
+  }
+
+  .page-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+    letter-spacing: -0.02em;
+    margin-bottom: 1.25rem;
+  }
+
+  .page-title em {
+    color: var(--red-deep);
+    font-style: italic;
+  }
+
+  .page-lede {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--ink-soft);
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  /* ========== PRODUCT DETAILS BAR ========== */
+  .details-bar {
+    max-width: 900px;
+    margin: 3rem auto 0;
+    padding: 1.75rem 2rem;
+    background: var(--parchment-deep);
+    border: 1px solid rgba(28, 20, 16, 0.12);
+    border-radius: 4px;
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.5) inset,
+      0 12px 32px -16px rgba(28, 20, 16, 0.2);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .detail {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .detail-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--red);
+    opacity: 0.85;
+  }
+
+  .detail-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    color: var(--ink);
+  }
+
+  .detail-note {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+  }
+
+  /* ========== GALLERY ========== */
+  .gallery-section {
+    padding: 5rem 2rem 6rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem 2.5rem;
+  }
+
+  .card-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  }
+
+  .card-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .card-image-wrap {
+    position: relative;
+    aspect-ratio: 4 / 5.5; /* A2 portrait roughly */
+    background: var(--parchment-deep);
+    border: 1px solid rgba(28, 20, 16, 0.12);
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.4) inset,
+      0 14px 36px -18px rgba(28, 20, 16, 0.35),
+      0 0 0 1px rgba(168, 132, 44, 0.15);
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  }
+
+  .card-image-wrap:hover {
+    transform: translateY(-3px);
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.4) inset,
+      0 20px 44px -16px rgba(28, 20, 16, 0.4),
+      0 0 0 1px rgba(168, 132, 44, 0.25);
+  }
+
+  .card-image-wrap a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .card-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    background: #ffffff;
+  }
+
+  .card-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin: 0;
+    text-align: center;
+  }
+
+  .card-caption {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--ink);
+    text-align: center;
+    margin: 0.1rem 0 0.3rem;
+    line-height: 1.3;
+  }
+
+  .card-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.25rem;
+    background: var(--red-deep);
+    color: var(--parchment);
+    font-family: 'Cormorant Unicase', serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: background 0.2s, transform 0.2s;
+    align-self: center;
+  }
+
+  .card-cta:hover {
+    background: var(--red-bright);
+    transform: translateY(-1px);
+  }
+
+  .card-cta .arrow {
+    transition: transform 0.2s;
+  }
+
+  .card-cta:hover .arrow {
+    transform: translateX(3px);
+  }
+
+  /* ========== EMPTY STATE / COMING SOON ========== */
+  .coming-soon {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 3rem 2rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--ink-soft);
+    border-top: 1px solid rgba(28, 20, 16, 0.12);
+    border-bottom: 1px solid rgba(28, 20, 16, 0.12);
+  }
+
+  .coming-soon strong {
+    font-style: normal;
+    color: var(--red-deep);
+    font-weight: 600;
+  }
+
+  /* ========== FOOTER ========== */
+  footer {
+    margin-top: 4rem;
+    padding: 3rem 2rem;
+    text-align: center;
+    border-top: 1px solid rgba(28, 20, 16, 0.15);
+    background: rgba(216, 194, 148, 0.2);
+  }
+
+  .footer-brand {
+    font-family: 'Cormorant Unicase', serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.3em;
+    color: var(--red-deep);
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+  }
+
+  .footer-tag {
+    margin-top: 0.75rem;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+  }
+
+  /* ========== RESPONSIVE ========== */
+  @media (max-width: 960px) {
+    .gallery-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem 2rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .gallery-section { padding: 3rem 1.25rem 4rem; }
+    .gallery-grid {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    .page-header { padding: 2.5rem 1.25rem 2rem; }
+    .details-bar { padding: 1.5rem 1.25rem; gap: 1.25rem; }
+  }
+</style>
+</head>
+<body>
+
+<main>
+
+  <nav class="top-nav">
+    <a class="back-link" href="index.html"><span class="arrow">←</span> &nbsp;Back to Red5Sorcery</a>
+  </nav>
+
+  <header class="page-header">
+    <div class="page-eyebrow">The Greeting Card Series</div>
+    <h1 class="page-title">Black Cat Diaries <em>Cards</em></h1>
+    <p class="page-lede">
+      The cat steps off the page and onto your mantelpiece. Fifty cards, drawn from the diaries — dry, deadpan, watchful. Print-on-demand from Halifax, sent anywhere.
+    </p>
+  </header>
+
+  <div class="details-bar">
+    <div class="detail">
+      <span class="detail-label">Size</span>
+      <span class="detail-value">A2 · 4.25 × 5.5″</span>
+    </div>
+    <div class="detail">
+      <span class="detail-label">Format</span>
+      <span class="detail-value">Packs of 10</span>
+    </div>
+    <div class="detail">
+      <span class="detail-label">Envelopes</span>
+      <span class="detail-value">Sold separately</span>
+    </div>
+    <div class="detail">
+      <span class="detail-label">Print</span>
+      <span class="detail-value">On-demand · Gelato</span>
+    </div>
+  </div>
+
+  <section class="gallery-section">
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- Cards rendered from CARDS array below -->
+    </div>
+
+    <div class="coming-soon" id="comingSoon">
+      <strong>More on the way.</strong> &nbsp;The series will grow to fifty cards — each one drawn from the diaries. Check back as the collection expands.
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-brand">Red5Sorcery Books &amp; Media</div>
+    <div class="footer-meta">Halifax · Nova Scotia · est. 2026</div>
+    <div class="footer-tag">Books. Code. Secrets.</div>
+  </footer>
+
+</main>
+
+<script>
+  /* ==========================================================
+     CARD CATALOGUE
+     ----------------------------------------------------------
+     To add a new card:
+       1. Drop the card image into the site root (or /cards/ if you prefer).
+       2. Add a new object to the CARDS array below.
+     Required fields:  image, title, etsyUrl
+     Optional field:   caption  (short italic line under the title)
+
+     Example:
+       {
+         image: "cards/BCD-Card-007.png",
+         title: "On Mondays",
+         caption: "The cat has opinions about meetings.",
+         etsyUrl: "https://www.etsy.com/ca/listing/XXXXXXXXX/..."
+       }
+     ========================================================== */
+
+  const CARDS = [
+    {
+      image: "BCD-Card-001.png",
+      title: "No. 001",
+      caption: "She's pretending to like it",
+      etsyUrl: "https://www.etsy.com/ca/listing/4495209281/black-cat-diaries-pack-of-10-greeting"
+    },
+    {
+      image: "BCD-Card-002.png",
+      title: "No. 002",
+      caption: "Nobody likes a quitter",
+      etsyUrl: "https://www.etsy.com/ca/listing/4495762970/black-cat-diaries-nobody-likes-a-quitter"
+    }
+  ];
+
+  /* ========== RENDER ========== */
+  (function() {
+    const grid = document.getElementById('galleryGrid');
+    const comingSoon = document.getElementById('comingSoon');
+
+    if (!grid) return;
+
+    if (CARDS.length === 0) {
+      // Nothing to render yet — hide grid, lean on the coming-soon message.
+      grid.style.display = 'none';
+    } else {
+      CARDS.forEach(card => {
+        const item = document.createElement('article');
+        item.className = 'card-item';
+
+        const captionHtml = card.caption
+          ? `<p class="card-caption">${escapeHtml(card.caption)}</p>`
+          : '';
+
+        item.innerHTML = `
+          <div class="card-image-wrap">
+            <a href="${escapeAttr(card.etsyUrl)}" target="_blank" rel="noopener" aria-label="Shop ${escapeAttr(card.title)} on Etsy">
+              <img src="${escapeAttr(card.image)}" alt="${escapeAttr(card.title)} — Black Cat Diaries greeting card" loading="lazy">
+            </a>
+          </div>
+          <h3 class="card-title">${escapeHtml(card.title)}</h3>
+          ${captionHtml}
+          <a class="card-cta" href="${escapeAttr(card.etsyUrl)}" target="_blank" rel="noopener">
+            Shop on Etsy <span class="arrow">→</span>
+          </a>
+        `;
+
+        grid.appendChild(item);
+      });
+    }
+
+    /* ========== REVEAL ON SCROLL ========== */
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+
+    document.querySelectorAll('.card-item').forEach(el => observer.observe(el));
+  })();
+
+  /* ========== TINY ESCAPERS ========== */
+  function escapeHtml(s) {
+    return String(s ?? '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+  function escapeAttr(s) {
+    return escapeHtml(s);
+  }
+</script>
+</body>
+</html>
