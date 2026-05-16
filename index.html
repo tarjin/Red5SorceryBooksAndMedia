@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Red5Sorcery — Books. Code. Secrets.</title>
-<meta name="description" content="Red5Sorcery Books & Media — independent literary works from Halifax. Books, cartoons, code, and secrets.">
+<title>Red5Sorcery — Boutique Books · Gifts · Reference</title>
+<meta name="description" content="Red5Sorcery Books & Media — a boutique press from Halifax. Boutique books, gifts, and reference works including the Black Cat Diaries, music bingo almanacs, and Secrets & Source Code.">
 
 <!-- Open Graph / social -->
-<meta property="og:title" content="Red5Sorcery — Books. Code. Secrets.">
-<meta property="og:description" content="Independent literary works from Halifax. Books, cartoons, code, and secrets.">
+<meta property="og:title" content="Red5Sorcery — Boutique Books · Gifts · Reference">
+<meta property="og:description" content="A boutique press from Halifax. Books, gifts, and reference works — from the Black Cat Diaries to Secrets & Source Code.">
 <meta property="og:image" content="https://red5sorcery.com/Red5SorceryLetters.png">
 <meta property="og:type" content="website">
 
@@ -654,6 +654,83 @@
     transform: translateX(4px);
   }
 
+  /* ========== COLLECTION TILES (non-flip product tiles) ========== */
+  /* Used for cards/hoodie/bingo-packs etc. — visually a peer of .book-card */
+  .tile-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .tile-image-wrap {
+    height: 540px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  .tile-image-wrap a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .tile-image-wrap img {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    box-shadow:
+      0 30px 50px -20px rgba(28, 20, 16, 0.5),
+      0 10px 20px -10px rgba(28, 20, 16, 0.3);
+    border-radius: 1px;
+    transition: transform 0.4s ease;
+  }
+
+  .tile-image-wrap:hover img {
+    transform: translateY(-4px);
+  }
+
+  /* ========== COLLECTION SECTION HEADINGS ========== */
+  /* Smaller heading style for individual collections under "Boutique Offerings" */
+  .collection-heading {
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+  }
+
+  .collection-heading:first-of-type {
+    margin-top: 2rem;
+  }
+
+  .collection-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    color: var(--ink);
+    letter-spacing: -0.01em;
+    margin-bottom: 0.5rem;
+  }
+
+  .collection-name em {
+    color: var(--red-deep);
+    font-style: italic;
+  }
+
+  .collection-lede {
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--ink-soft);
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
   /* ========== DIVIDER ========== */
   .ornament {
     text-align: center;
@@ -848,10 +925,10 @@
   <section class="hero">
     <img class="hero-letters" src="Red5SorceryLetters.png" alt="Red5Sorcery">
     <div class="tagline">
-      Books<span class="dot"></span>Code<span class="dot"></span>Secrets
+      Boutique Books<span class="dot"></span>Gifts<span class="dot"></span>Reference
     </div>
     <p class="hero-sub">
-      Independent literary works from Halifax — quiet truths, watchful cats, and the architecture of digital secrets.
+      A boutique press from Halifax — quiet truths, watchful cats, heritage data, and the architecture of digital secrets.
     </p>
     <div class="scroll-cue">↓ &nbsp; scroll &nbsp; ↓</div>
   </section>
@@ -872,23 +949,13 @@
           <span>From the Black Cat Diaries</span>
         </div>
       </div>
-      <div class="cards-pitch">
-        <p class="cards-pitch-line">The cat has a card series — drawings you won't find in the daily cartoons or the books.</p>
-        <a class="book-cta" href="cards.html">
-          Shop the Card Series <span class="arrow">→</span>
-        </a>
-      </div>
     </div>
   </section>
 
   <div class="ornament">✦ ✦ ✦</div>
 
-  <!-- ========== BOOKS ========== -->
-  <section class="reveal" id="books">
-    <div class="section-eyebrow">The Catalogue</div>
-    <h2 class="section-title">Four Volumes</h2>
-    <p class="section-lede">One for the cipher. One for the cat. Two for the countdown. Available in print and digital.</p>
-
+  <!-- ========== WHERE TO FIND IT ========== -->
+  <section class="reveal" id="shop-anchors" style="padding-top: 2rem; padding-bottom: 1rem;">
     <div class="editions-banner">
       <a class="edition" href="https://www.blurb.ca/user/tarjin" target="_blank" rel="noopener">
         <span class="edition-label">Print</span>
@@ -897,15 +964,22 @@
       </a>
       <div class="edition-divider">or</div>
       <a class="edition" href="https://thesocialcredit.etsy.com" target="_blank" rel="noopener">
-        <span class="edition-label">Digital</span>
+        <span class="edition-label">Digital &amp; Gifts</span>
         <span class="edition-name">Etsy</span>
-        <span class="edition-detail">PDF bundles &amp; more, from our store TheSocialCredit.</span>
+        <span class="edition-detail">PDFs, cards, apparel &amp; more, from our store TheSocialCredit.</span>
       </a>
     </div>
+  </section>
+
+  <!-- ========== FOUNDING WORKS ========== -->
+  <section class="reveal" id="founding-works">
+    <div class="section-eyebrow">Founding Works</div>
+    <h2 class="section-title">The Origin</h2>
+    <p class="section-lede">The books that proved Red5Sorcery could do this.</p>
 
     <div class="books-grid">
 
-      <!-- BOOK 1: Secrets & Source Code -->
+      <!-- Secrets & Source Code -->
       <article class="book-card">
         <div class="book-flip" data-book="rqsm" onclick="this.classList.toggle('flipped'); syncToggle(this);">
           <div class="book-flip-inner">
@@ -944,7 +1018,26 @@
         </div>
       </article>
 
-      <!-- BOOK 2: Black Cat Diaries -->
+    </div>
+  </section>
+
+  <div class="ornament">✦ ✦ ✦</div>
+
+  <!-- ========== BOUTIQUE OFFERINGS ========== -->
+  <section class="reveal" id="boutique-offerings">
+    <div class="section-eyebrow">Boutique Offerings</div>
+    <h2 class="section-title">The Collections</h2>
+    <p class="section-lede">Worlds, not just titles — each collection grows as the press grows.</p>
+
+    <!-- ----- COLLECTION: Black Cat Diaries ----- -->
+    <div class="collection-heading">
+      <h3 class="collection-name">Black Cat Diaries</h3>
+      <p class="collection-lede">One black cat. A world of small absurdities and quiet truths — in books, cards, and apparel.</p>
+    </div>
+
+    <div class="books-grid">
+
+      <!-- Black Cat Diaries — Volume 1 (book) -->
       <article class="book-card">
         <div class="book-flip" data-book="bcd" onclick="this.classList.toggle('flipped'); syncToggle(this);">
           <div class="book-flip-inner">
@@ -977,7 +1070,59 @@
         </div>
       </article>
 
-      <!-- BOOK 3: Music Bingo Almanac — UK Edition -->
+      <!-- Black Cat Diaries — The Cards (tile linking to cards.html) -->
+      <article class="tile-card">
+        <div class="tile-image-wrap">
+          <a href="cards.html" aria-label="View the Black Cat Diaries greeting card series">
+            <img src="https://i.etsystatic.com/52237751/r/il/5841c8/7955812050/il_1588xN.7955812050_c0ed.jpg" alt="Black Cat Diaries — greeting card series">
+          </a>
+        </div>
+        <div class="book-meta">
+          <h3 class="book-title">The Cards</h3>
+          <p class="book-author">A series of fifty</p>
+          <p class="book-blurb">
+            The cat steps off the page and onto your mantelpiece. A2 greeting cards, sold in packs of ten — drawings you won't find in the books or the daily cartoons. Three cards live, scaling to fifty.
+          </p>
+          <div class="book-ctas">
+            <a class="book-cta" href="cards.html">
+              View the Series <span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Black Cat Diaries — The Hoodie (tile linking to Etsy) -->
+      <article class="tile-card">
+        <div class="tile-image-wrap">
+          <a href="https://www.etsy.com/ca/listing/4496986213/black-cat-diaries-hoodie-large-ultimate" target="_blank" rel="noopener" aria-label="Shop the Black Cat Diaries hoodie on Etsy">
+            <img src="https://i.etsystatic.com/52237751/r/il/38f7cd/7967757366/il_1588xN.7967757366_aylf.jpg" alt="Black Cat Diaries hoodie">
+          </a>
+        </div>
+        <div class="book-meta">
+          <h3 class="book-title">The Hoodie</h3>
+          <p class="book-author">Black Cat Diaries apparel</p>
+          <p class="book-blurb">
+            For those who prefer their cat on the outside. Heavyweight, dry-deadpan, made on demand — the first apparel piece in the Black Cat Diaries collection.
+          </p>
+          <div class="book-ctas">
+            <a class="book-cta" href="https://www.etsy.com/ca/listing/4496986213/black-cat-diaries-hoodie-large-ultimate" target="_blank" rel="noopener">
+              Shop on Etsy <span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- ----- COLLECTION: Reference Editions ----- -->
+    <div class="collection-heading">
+      <h3 class="collection-name">Reference <em>Editions</em></h3>
+      <p class="collection-lede">Boutique reference works — heritage data, beautifully bound. Almanacs, guides, and compendia from the Red5Sorcery shelf.</p>
+    </div>
+
+    <div class="books-grid">
+
+      <!-- The Music Bingo Almanac — UK Edition -->
       <article class="book-card">
         <div class="book-flip" data-book="mba-uk" onclick="this.classList.toggle('flipped'); syncToggle(this);">
           <div class="book-flip-inner">
@@ -1011,6 +1156,38 @@
       </article>
 
     </div>
+
+    <!-- ----- COLLECTION: Music Bingo Packs ----- -->
+    <div class="collection-heading">
+      <h3 class="collection-name">Music <em>Bingo</em></h3>
+      <p class="collection-lede">The game line — printable bingo cards and curated playlists for hosts, bars, and music-night regulars. A growing catalogue of editions.</p>
+    </div>
+
+    <div class="books-grid">
+
+      <!-- Music Bingo Packs — teaser tile linking to bingo.html -->
+      <article class="tile-card">
+        <div class="tile-image-wrap">
+          <a href="bingo.html" aria-label="View the Music Bingo Packs catalogue">
+            <img src="https://i.etsystatic.com/52237751/r/il/7860b4/8020686246/il_1588xN.8020686246_14fi.jpg" alt="Music Bingo Packs — printable bingo cards and playlists">
+          </a>
+        </div>
+        <div class="book-meta">
+          <h3 class="book-title">Music Bingo Packs</h3>
+          <p class="book-author">Printable cards &amp; curated playlists</p>
+          <p class="book-blurb">
+            Eight hundred printable bingo cards and four playlists per edition — built for hosts, bars, and trivia nights. Five editions live: UK 80s, Duets, Yacht Rock, 90s Alternative, and Billboard 1987. More on the way.
+          </p>
+          <div class="book-ctas">
+            <a class="book-cta" href="bingo.html">
+              View the Catalogue <span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
   </section>
 
   <!-- ========== AI COUNCIL PULL-QUOTES ========== -->
@@ -1084,7 +1261,7 @@
   <footer>
     <div class="footer-brand">Red5Sorcery Books &amp; Media</div>
     <div class="footer-meta">Halifax · Nova Scotia · est. 2026</div>
-    <div class="footer-tag">Books. Code. Secrets.</div>
+    <div class="footer-tag">Boutique Books · Gifts · Reference</div>
   </footer>
 
 </main>
