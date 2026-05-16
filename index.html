@@ -646,6 +646,23 @@
     flex-wrap: wrap;
   }
 
+  /* Companion/sub-CTA row: forces a new line, smaller buttons side by side */
+  .book-ctas-companion {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+    flex-basis: 100%; /* forces this row onto its own line within .book-ctas */
+  }
+
+  .book-cta.compact {
+    padding: 0.55rem 1.1rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    gap: 0.4rem;
+  }
+
   .book-cta .arrow {
     transition: transform 0.3s ease;
     font-family: serif;
@@ -1014,6 +1031,14 @@
             <a class="book-cta secondary" href="https://CloakYourSecrets.com" target="_blank" rel="noopener">
               Try the Free App <span class="arrow">→</span>
             </a>
+            <div class="book-ctas-companion">
+              <a class="book-cta secondary compact" href="https://www.etsy.com/ca/listing/4317077059/red5sorcery-pro-unlock-image" target="_blank" rel="noopener">
+                Pro Unlock Image <span class="arrow">→</span>
+              </a>
+              <a class="book-cta secondary compact" href="https://www.etsy.com/ca/listing/4317087452/red5sorcery-vegas-unlock-image" target="_blank" rel="noopener">
+                VEGAS Unlock Image <span class="arrow">→</span>
+              </a>
+            </div>
           </div>
         </div>
       </article>
