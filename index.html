@@ -86,6 +86,17 @@
     to   { opacity: 1; transform: translateY(0); }
   }
 
+  .hero-press-name {
+    margin-top: 0.85rem;
+    font-family: 'Cormorant Unicase', serif;
+    font-size: clamp(0.85rem, 1.6vw, 1.05rem);
+    font-weight: 500;
+    letter-spacing: 0.55em;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    animation: heroFade 1.8s ease-out 0.25s backwards;
+  }
+
   .tagline {
     margin-top: 2rem;
     font-family: 'Cormorant Unicase', serif;
@@ -941,6 +952,7 @@
   <!-- ========== HERO ========== -->
   <section class="hero">
     <img class="hero-letters" src="Red5SorceryLetters.png" alt="Red5Sorcery">
+    <div class="hero-press-name">Red5Sorcery Books &amp; Media</div>
     <div class="tagline">
       Boutique Books<span class="dot"></span>Gifts<span class="dot"></span>Reference
     </div>
