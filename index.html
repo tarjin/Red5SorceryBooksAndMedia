@@ -1022,6 +1022,268 @@
     user-select: all;
   }
 
+  /* ========== PROFESSIONAL SERVICES SECTION ========== */
+  .services-section {
+    padding: 5rem 2rem 4rem;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .services-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .services-eyebrow::before,
+  .services-eyebrow::after {
+    content: '';
+    width: 60px;
+    height: 1px;
+    background: var(--ink);
+    opacity: 0.25;
+  }
+
+  .services-headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: clamp(1.5rem, 3.2vw, 2rem);
+    color: var(--ink);
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+    max-width: 720px;
+    margin: 0 auto 1.5rem;
+    font-style: italic;
+  }
+
+  .services-body {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    max-width: 660px;
+    margin: 0 auto 3rem;
+  }
+
+  .testimonial {
+    max-width: 640px;
+    margin: 0 auto 2.5rem;
+    padding: 2.25rem 2rem;
+    background: var(--parchment-deep);
+    border: 1px solid rgba(28, 20, 16, 0.12);
+    border-radius: 4px;
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.5) inset,
+      0 12px 32px -16px rgba(28, 20, 16, 0.2);
+    position: relative;
+  }
+
+  .testimonial-mark {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    line-height: 1;
+    color: var(--red);
+    opacity: 0.35;
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+    font-weight: 600;
+  }
+
+  .testimonial-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: var(--ink);
+    margin-bottom: 1.25rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .testimonial-attr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .testimonial-attr-name {
+    font-family: 'Cormorant Unicase', serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.15em;
+    color: var(--red-deep);
+    text-transform: uppercase;
+  }
+
+  .testimonial-attr-role {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+  }
+
+  .services-cta-line {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--ink-soft);
+  }
+
+  .services-cta-line .email {
+    font-family: 'Cormorant Unicase', serif;
+    font-style: normal;
+    letter-spacing: 0.08em;
+    color: var(--red-deep);
+    user-select: all;
+  }
+
+  /* ========== EVENTS & APPEARANCES SECTION ========== */
+  .events-section {
+    padding: 5rem 2rem 4rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .events-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .events-eyebrow::before,
+  .events-eyebrow::after {
+    content: '';
+    width: 60px;
+    height: 1px;
+    background: var(--ink);
+    opacity: 0.25;
+  }
+
+  .events-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+    color: var(--ink);
+    letter-spacing: -0.01em;
+    margin-bottom: 0.75rem;
+  }
+
+  .events-lede {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--ink-soft);
+    max-width: 620px;
+    margin: 0 auto 3rem;
+  }
+
+  .event-block {
+    margin-bottom: 4rem;
+  }
+
+  .event-poster-wrap {
+    max-width: 480px;
+    margin: 0 auto 2rem;
+  }
+
+  .event-poster {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 3px;
+    box-shadow:
+      0 22px 48px -22px rgba(28, 20, 16, 0.55),
+      0 0 0 1px rgba(168, 132, 44, 0.2);
+  }
+
+  .event-details {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    max-width: 540px;
+    margin: 0 auto;
+  }
+
+  .event-details strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  .event-details .event-row {
+    margin-bottom: 0.4rem;
+  }
+
+  .speaking-cta {
+    margin-top: 2rem;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(28, 20, 16, 0.12);
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .speaking-cta-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: var(--ink);
+    margin-bottom: 1rem;
+  }
+
+  .speaking-cta-body {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    margin-bottom: 1.25rem;
+  }
+
+  .speaking-cta-email {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--ink-soft);
+  }
+
+  .speaking-cta-email .email {
+    font-family: 'Cormorant Unicase', serif;
+    font-style: normal;
+    letter-spacing: 0.08em;
+    color: var(--red-deep);
+    user-select: all;
+  }
+
+  /* ========== FOOTER DISCLAIMER ========== */
+  .footer-disclaimer {
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(28, 20, 16, 0.08);
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: var(--ink-soft);
+    opacity: 0.75;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   /* ========== RESPONSIVE ========== */
   @media (max-width: 720px) {
     section { padding: 4rem 1.25rem; }
@@ -1395,25 +1657,6 @@
 
   </section>
 
-  <!-- ========== SECRETS & SINS / YOUTUBE ========== -->
-  <section class="sins-section reveal" id="secrets-and-sins">
-    <div class="sins-inner">
-      <div class="sins-eyebrow">A Forthcoming Book · December 1, 2027</div>
-      <a class="sins-banner-wrap" href="https://www.youtube.com/@TheSocialCredit/videos" target="_blank" rel="noopener">
-        <img src="SecretsAndSins-banner.png" alt="Secrets &amp; Sins — Art and Poetry in Dialogue, by Tarjin Rahman">
-      </a>
-      <p class="sins-tagline">
-        A collection of original love poems paired with high-quality artwork — releasing December 1, 2027. In the meantime, the YouTube channel features select poems with reflections on their meaning and themes, full text included in every video's description.
-      </p>
-      <a class="sins-cta" href="https://www.youtube.com/@TheSocialCredit/videos" target="_blank" rel="noopener">
-        <svg class="sins-cta-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-        </svg>
-        Watch on YouTube
-      </a>
-    </div>
-  </section>
-
   <!-- ========== AUTHOR BLOCK ========== -->
   <section class="author-section reveal" id="author">
     <div class="author-inner">
@@ -1430,6 +1673,59 @@
     </div>
   </section>
 
+  <!-- ========== PROFESSIONAL SERVICES ========== -->
+  <section class="services-section reveal" id="services">
+    <div class="services-eyebrow">Professional Services</div>
+    <h2 class="services-headline">Some problems don't need three years. They need the right method, the right partner, and one good afternoon.</h2>
+    <p class="services-body">
+      Red5Sorcery takes on selected client engagements — compliance documents, data-to-publication work, strategic synthesis — where decades of professional experience meet modern AI methodology to compress timelines that would otherwise be measured in years.
+    </p>
+
+    <blockquote class="testimonial">
+      <div class="testimonial-mark" aria-hidden="true">&ldquo;</div>
+      <p class="testimonial-quote">
+        What took our team 3 years of meetings, we completed in under 4 hours.
+      </p>
+      <div class="testimonial-attr">
+        <span class="testimonial-attr-name">Bill Cossitt</span>
+        <span class="testimonial-attr-role">Mortgage Broker</span>
+      </div>
+    </blockquote>
+
+    <p class="services-cta-line">
+      For project inquiries — <span class="email">Red5Sorcery@gmail.com</span>
+    </p>
+  </section>
+
+  <!-- ========== EVENTS & APPEARANCES ========== -->
+  <section class="events-section reveal" id="events">
+    <div class="events-eyebrow">Events &amp; Appearances</div>
+    <h2 class="events-title">Where to Find Tarjin</h2>
+    <p class="events-lede">In-person signings, readings, and talks — past, upcoming, and yet to be booked.</p>
+
+    <div class="event-block">
+      <div class="event-poster-wrap">
+        <img class="event-poster" src="BookSigningMay-24-2026.jpg" alt="Book Signing — Tarjin Rahman, May 24, 2026, Staggers Pub and Grub, 2:00 to 4:00 PM, MC and music by Brandon the Babe Entertainment">
+      </div>
+      <div class="event-details">
+        <p class="event-row"><strong>Book Signing</strong> — Secrets &amp; Source Code and Black Cat Diaries</p>
+        <p class="event-row"><strong>Sunday, May 24, 2026</strong> · 2:00 PM to 4:00 PM</p>
+        <p class="event-row"><strong>Staggers Pub and Grub</strong> · Dartmouth, Nova Scotia</p>
+        <p class="event-row">MC &amp; music provided by <strong>Brandon the Babe Entertainment</strong></p>
+      </div>
+    </div>
+
+    <div class="speaking-cta">
+      <h3 class="speaking-cta-heading">Book Tarjin for an Event</h3>
+      <p class="speaking-cta-body">
+        Available for signings, readings, and talks on cryptography and digital privacy, observational cartooning, the design of reference books from heritage data, and the economics of boutique publishing in the AI era. Libraries, bookstores, conferences, podcasts, and venues all welcome.
+      </p>
+      <p class="speaking-cta-email">
+        Speaking inquiries — <span class="email">Red5Sorcery@gmail.com</span>
+      </p>
+    </div>
+  </section>
+
   <!-- ========== CONTACT BLOCK ========== -->
   <section class="contact-section reveal" id="contact">
     <div class="contact-eyebrow">Contact</div>
@@ -1441,6 +1737,9 @@
     <div class="footer-brand">Red5Sorcery Books &amp; Media</div>
     <div class="footer-meta">Halifax · Nova Scotia · est. 2026</div>
     <div class="footer-tag">Boutique Books · Gifts · Reference</div>
+    <div class="footer-disclaimer">
+      Red5Sorcery Books &amp; Media is a boutique publisher. The views, opinions, and creative content published here are those of the author alone, and do not reflect the positions of any past, present, or future employer.
+    </div>
   </footer>
 
 </main>
