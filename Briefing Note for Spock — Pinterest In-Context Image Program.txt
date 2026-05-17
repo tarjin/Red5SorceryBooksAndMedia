@@ -1,0 +1,98 @@
+# Briefing Note for Spock — Pinterest In-Context Image Program
+
+**From:** T (Conductor)
+**To:** Spock
+**Re:** Standing brief for Pinterest in-context product imagery
+**Status:** Active program, ongoing across current Red5Sorcery catalog
+
+---
+
+## The Program
+
+Red5Sorcery is building a Pinterest presence as a parachute marketing channel. Pinterest is a visual search engine, not a social feed, and its 2026 algorithm rewards **fresh pins** — multiple distinct images pointing to the same destination URL. Each Etsy listing in our catalog needs 3–5 in-context lifestyle images over time, each framing the product from a different audience angle.
+
+Your role: generate the visual scenes. My role: keyword strategy, pin descriptions, board placement, scheduling. Claude's role: briefing structure, copy, analytics review.
+
+This is a standing program, not a one-off batch. Expect to return to it weekly.
+
+## Core Principle
+
+**We are not pinning the product. We are pinning reasons someone in Pinterest's mental state might want the product.**
+
+A bare PNG of a bingo card, a book cover, or a greeting card underperforms on Pinterest. The card-on-pub-table, the book-on-nightstand, the card-in-an-envelope-on-a-desk — those convert. The product must appear *as a real object in a real moment of human use*, not as a catalog shot.
+
+Multiple scenes per listing, each targeting a different audience mood and search intent, all pointing to the same Etsy URL.
+
+## The Red5Sorcery Visual Standard
+
+Hold these constant across every scene, every product line, every pin. They are the brand thread that makes a viewer who sees a pub scene and an intimate kitchen scene a week apart unconsciously recognize both as ours.
+
+**Palette:** parchment cream (#f4ead5), parchment deep (#ead9b8), ink black (#1c1410), deep red (#8b1a1a), gold accent (#a8842c). Scene lighting and props should harmonize with this palette — warm wood tones, brass, candlelight, aged paper, oxblood leather, cream linen. Avoid cool grey-blues, neon, cold daylight fluorescents, plastic-modern surfaces unless deliberately contrasting.
+
+**Rendering:** painterly, not photorealistic. Soft brushwork, slight warmth, hint of texture in surfaces. Read as composed art that happens to depict a scene, not as a fake photograph. This sidesteps the AI-detection instinct that's growing in Pinterest's maker/craft audience, and aligns with Red5Sorcery's boutique press identity.
+
+**Typography (when visible):** Cormorant Garamond, Cormorant Unicase, EB Garamond, JetBrains Mono for any code/spec aesthetics. Never sans-serif modern fonts on visible signage, menus, or print pieces within the scene.
+
+**Composition:** vertical 2:3 framing, 1000×1500px output. Product positioned in the upper two-thirds. Leave breathing room near top or bottom for potential text overlay (T will add overlays separately in Canva). Product must be **readable at thumbnail size** — if it's a bingo card, the decade and a few song titles should be legible; if it's a book cover, the title; if it's a greeting card, the punchline or character.
+
+**Atmosphere:** warm, intimate, slightly aspirational but not luxurious. Inviting, not aspirational-cold. Halifax-coded — a boutique press from a real place run by real people, not a faceless global brand.
+
+## The Five Scene Categories
+
+Every product gets variants across these categories. Not every product fits every category — use judgment.
+
+**1. The Communal Scene** — product in a venue or gathering. Pub, café, community hall. Multiple people implied (drinks, chairs, ambient activity) but faces optional. Sells: *use this with others.* Target audience: hosts, organizers, professionals running events.
+
+**2. The Intimate Scene** — product in a small, personal setting. Nightstand, kitchen table, reading nook, two glasses of wine, candlelight. One person implied or alone. Sells: *use this for yourself or with someone close.* Target audience: gift-givers, solo readers, date-night planners.
+
+**3. The Workspace Scene** — product as a tool. Desk, clipboard, open laptop, coffee mug, daylight from a window. Sells: *use this in your work or your hosting.* Target audience: MCs and hosts (Music Bingo), creative professionals (cards), readers building a creative practice.
+
+**4. The Gift / In-Transit Scene** — product mid-presentation. Envelope being opened, ribbon being tied, package on a doorstep, card in a hand. Sells: *give this.* Target audience: gift-buyers, occasion shoppers — a massive Pinterest segment.
+
+**5. The Object Beauty Shot** — product against a brand-aligned still-life background. Red5Sorcery parchment, dried botanicals, vintage book stack, brass, candlelight. No human use implied. Sells: *this is a designed object worth owning.* Target audience: design-minded buyers, collectors, the aesthetic crowd.
+
+## Per-Product Adaptations
+
+**Black Cat Diaries greeting card (individual)** — heavy on Gift/In-Transit and Intimate. The card opened on a friend's kitchen counter, envelope tied with twine on a desk, card propped on a windowsill next to coffee, hand reaching for the card on a doormat, card pinned to a corkboard among other keepsakes. Communal works for occasion-specific cards (the card visible at a small birthday gathering). Object beauty works for the design-minded buyer (card laid on parchment with a fountain pen and pressed flowers). The product is small and personal — scenes should match that scale. Whichever card is being briefed, the cartoon's punchline or character must be legible at thumbnail size.
+
+**Black Cat Diaries Vol. 1** — heavy on Intimate and Object Beauty. Book on a nightstand with a reading lamp, open on a kitchen table with morning coffee, in a stack of art books on a side table, propped against a vintage clock on a shelf. Gift/In-Transit works well — this is a real gift book (wrapped in twine on a doorstep, slipped into a tote bag with a card). Workspace fits for the cartoonist or illustrator's desk (book open beside sketchbook and ink pens). Communal less natural — this isn't a group-use product.
+
+**Music Bingo Almanac UK Edition 1980s** — heavy on Communal and Workspace. The pub setting is the spiritual home of this product, and Britishness should be unmistakable: dartboard on the wall, taps with British ale branding (no specific brewery names — keep it generic), Union Jack-adjacent textiles on a coaster or banner, UK pub interior cues (etched glass, dark wood panelling, brass fittings, chalkboard menu in Cormorant). MC's clipboard with the book open beside a microphone, daylight from a leaded-glass window. Decade-specific 80s details where they read naturally — a vinyl sleeve hinted at in the background, a Walkman on a side table, period-appropriate pint glass styling. Intimate works for the nostalgic listener revisiting the songs of their youth. Avoid American or Canadian visual cues entirely.
+
+**Music Bingo printable card pack (specify decade/edition per request)** — heavy on Communal and Workspace, but distinct from the Almanac. This is a *downloadable* product, so the scenes should subtly signal "printed at home, used tonight" rather than a published book. Cards spread on a coffee table mid-game with pens nearby, a stack of freshly printed cards on a desk beside a laptop showing the PDF, a card held up in a hand at a casual gathering, cards taped to a fridge or pinned to a kitchen corkboard ahead of a party. Gift/In-Transit works less well here (digital products don't gift the same way). Object beauty works if framed as "DIY craft kit aesthetic" — printed cards laid out with washi tape, scissors, a coffee mug, the home-host's prep table.
+
+## What to Avoid
+
+- **Photorealism.** We're not faking photographs. We're painting scenes.
+- **Visual sameness across a single product's batch.** Multiple pub scenes that all look like the same pub will compete with each other rather than compound. Vary the *world* (pub vs. party vs. workspace vs. intimate vs. studio), not just the angle.
+- **Generic stock-photo affect.** No suited business people pointing at laptops. No multi-ethnic-team-smiling-at-camera. No fake-looking modern minimalism.
+- **Cool palettes.** Cool blue, grey, white-minimalism — these are off-brand and Pinterest-generic. Warm always.
+- **Sans-serif modernity in visible typography.** Breaks the boutique press identity instantly.
+- **Cluttered compositions.** Pinterest viewers scroll fast. One clear focal point, supporting context elements, breathing room.
+- **Faces in close-up.** Hands, silhouettes, over-the-shoulder framing all fine. Identifiable faces invite scrutiny and uncanny-valley risk.
+- **Cross-geography contamination.** UK products must feel UK. North American products must feel North American. Mixing pub-types or signage breaks the spell.
+
+## Workflow
+
+T will request scenes per session, typically batched per product. Example request format:
+
+> *"Spock, for the Music Bingo Almanac UK Edition 1980s — generate a five-scene set. Communal: dimly lit British pub, dark wood, brass taps, dartboard in the background, book open on a worn table with a pint of ale, '1980s' visible on the cover. Workspace: MC's clipboard with the book open, microphone in soft focus, vinyl sleeve hinted at in the background. Intimate: kitchen table, single page open, coffee mug, leaded-glass window light. Gift: book wrapped in twine on a doorstep, autumn leaves on the step. Object beauty: book on parchment background with brass candlestick, a Walkman, and a vinyl record."*
+
+Spock returns the scenes. Claude provides pin descriptions and keywords. T schedules through Pinterest.
+
+Over time, we build a library — each product accumulates more variations, each variation a fresh shot at Pinterest's algorithm. By month three we should have 30–50 distinct in-context pins working in the background across the current four-product set.
+
+## The Standard for "Good"
+
+A scene is good when:
+1. A Pinterest user scrolling at speed stops on it.
+2. The product is identifiable at thumbnail size.
+3. The viewer can imagine themselves in the scene's moment.
+4. The Red5Sorcery brand thread is unmistakable across the set.
+5. It reads as *art*, not as a generated lifestyle photo.
+
+That's the bar. Welcome to the program.
+
+— T, via Claude
+
+---
