@@ -352,21 +352,6 @@
     color: var(--ink-soft);
   }
 
-  .footer-disclaimer {
-    margin-top: 1.25rem;
-    padding-top: 1.25rem;
-    border-top: 1px solid rgba(28, 20, 16, 0.08);
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 0.82rem;
-    line-height: 1.5;
-    color: var(--ink-soft);
-    opacity: 0.75;
-    max-width: 640px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   /* ========== RESPONSIVE ========== */
   @media (max-width: 960px) {
     .gallery-grid {
@@ -434,10 +419,7 @@
   <footer>
     <div class="footer-brand">Red5Sorcery Books &amp; Media</div>
     <div class="footer-meta">Halifax · Nova Scotia · est. 2026</div>
-    <div class="footer-tag">Boutique Books · Gifts · Reference</div>
-    <div class="footer-disclaimer">
-      Red5Sorcery Books &amp; Media is a boutique publisher. The views, opinions, and creative content published here are those of the author alone, and do not reflect the positions of any past, present, or future employer.
-    </div>
+    <div class="footer-tag">Books. Code. Secrets.</div>
   </footer>
 
 </main>
@@ -447,17 +429,15 @@
      CARD CATALOGUE
      ----------------------------------------------------------
      To add a new card:
-       1. Publish the card listing on Etsy.
-       2. Right-click the main listing image and copy its address
-          (an i.etsystatic.com URL).
-       3. Add a new object to the CARDS array below.
+       1. Drop the card image into the site root (or /cards/ if you prefer).
+       2. Add a new object to the CARDS array below.
      Required fields:  image, title, etsyUrl
      Optional field:   caption  (short italic line under the title)
 
      Example:
        {
-         image: "https://i.etsystatic.com/52237751/r/il/.../il_1588xN.XXXXXXXXXX_xxxx.jpg",
-         title: "No. 007",
+         image: "cards/BCD-Card-007.png",
+         title: "On Mondays",
          caption: "The cat has opinions about meetings.",
          etsyUrl: "https://www.etsy.com/ca/listing/XXXXXXXXX/..."
        }
@@ -465,22 +445,34 @@
 
   const CARDS = [
     {
-      image: "https://i.etsystatic.com/52237751/r/il/5841c8/7955812050/il_1588xN.7955812050_c0ed.jpg",
+      image: "BCD-Card-001.png",
       title: "No. 001",
       caption: "She's pretending to like it",
       etsyUrl: "https://www.etsy.com/ca/listing/4495209281/black-cat-diaries-pack-of-10-greeting"
     },
     {
-      image: "https://i.etsystatic.com/52237751/r/il/11da57/8007166305/il_1588xN.8007166305_nvv3.jpg",
+      image: "BCD-Card-002.png",
       title: "No. 002",
       caption: "Nobody likes a quitter",
       etsyUrl: "https://www.etsy.com/ca/listing/4495762970/black-cat-diaries-nobody-likes-a-quitter"
     },
     {
-      image: "https://i.etsystatic.com/52237751/r/il/17ef81/8060725583/il_1588xN.8060725583_ftzm.jpg",
+      image: "BCD-Card-003.png",
       title: "No. 003",
       caption: "YOU'RE INVITED. Please pretend you're excited.",
       etsyUrl: "https://www.etsy.com/ca/listing/4503986450/black-cat-diaries-greeting-card-youre"
+    },
+    {
+      image: "https://i.etsystatic.com/52237751/r/il/906b8d/8038044068/il_1588xN.8038044068_az8j.jpg",
+      title: "No. 004",
+      caption: "Breakup Party. You're Invited.",
+      etsyUrl: "https://www.etsy.com/ca/listing/4507955670/black-cat-diaries-greeting-card-breakup"
+    },
+    {
+      image: "https://i.etsystatic.com/52237751/r/il/442756/8038202212/il_1588xN.8038202212_5zsl.jpg",
+      title: "No. 005",
+      caption: "She lost 180 lbs. Turns out it was him.",
+      etsyUrl: "https://www.etsy.com/ca/listing/4507977728/black-cat-diaries-greeting-card-she-lost"
     }
   ];
 
