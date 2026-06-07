@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Professional Services — Jingles &amp; Audio Branding · Red5Sorcery</title>
-<meta name="description" content="Custom jingles and audio branding for small businesses, produced with the latest AI music tools. Proof-of-concept spots from Red5Sorcery Books & Media, Halifax.">
+<title>Professional Services — Jingles, Documents &amp; Data-Driven Books · Red5Sorcery</title>
+<meta name="description" content="Custom jingles, professional documents, and branded data-driven books — almanacs, reference volumes, and more — for small businesses. Red5Sorcery Books & Media, Halifax.">
 <meta property="og:title" content="Professional Services — Red5Sorcery">
-<meta property="og:description" content="Custom jingles and audio branding for small businesses. Hear the proof of concept.">
+<meta property="og:description" content="Jingles, professional documents, and branded data-driven books for small businesses. Hear the spots, see the books.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -87,6 +87,27 @@
   .btn .arr{transition:transform .3s;}
   .btn:hover .arr{transform:translateX(4px);}
 
+  /* DOCUMENT PREPARATION */
+  .doc-intro{color:var(--soft);max-width:66ch;font-size:1.04rem;line-height:1.75;margin-bottom:1.05rem;}
+  .doc-intro strong{color:var(--cream);font-weight:600;}
+  .docs{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:clamp(1rem,2.4vw,1.6rem);margin-top:1.7rem;}
+  .doc{display:flex;flex-direction:column;background:var(--panel);border:1px solid #332c22;text-decoration:none;color:inherit;overflow:hidden;transition:transform .35s,border-color .35s,box-shadow .35s;}
+  .doc:hover{transform:translateY(-5px);border-color:var(--cream);box-shadow:0 18px 40px rgba(0,0,0,.45);}
+  .doc__img{aspect-ratio:1/1;background:#0f0d0a;display:grid;place-items:center;overflow:hidden;}
+  .doc__img img{width:100%;height:100%;object-fit:contain;display:block;transition:transform .5s;}
+  .doc:hover .doc__img img{transform:scale(1.04);}
+  .doc__cap{padding:1rem 1.1rem 1.2rem;}
+  .doc__t{font-family:'Archivo',sans-serif;font-weight:700;font-size:1rem;color:var(--cream);line-height:1.25;}
+  .doc__s{font-family:'Special Elite',monospace;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:.35rem;}
+
+  /* TESTIMONIAL */
+  .tm{position:relative;margin-top:clamp(2rem,4vw,2.8rem);background:var(--panel);border:1px solid #332c22;border-left:3px solid var(--red);padding:clamp(1.6rem,3vw,2.4rem) clamp(1.6rem,3vw,2.6rem);max-width:760px;}
+  .tm__mark{position:absolute;top:.1rem;left:.9rem;font-family:'Anton',sans-serif;font-size:3.4rem;color:var(--red);opacity:.5;line-height:1;}
+  .tm__q{font-size:clamp(1.15rem,2.4vw,1.5rem);line-height:1.4;color:var(--cream);font-weight:500;padding-left:1.3rem;}
+  .tm__attr{margin-top:1.1rem;padding-left:1.3rem;display:flex;flex-direction:column;gap:.15rem;}
+  .tm__name{font-family:'Archivo',sans-serif;font-weight:700;color:var(--cream);}
+  .tm__role{font-family:'Special Elite',monospace;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
+
   /* FOOTER */
   .credits{display:flex;align-items:center;gap:clamp(1.2rem,3vw,2.6rem);flex-wrap:wrap;padding:clamp(1.4rem,2.6vw,2rem) clamp(1.3rem,4vw,3.2rem);background:var(--surround);border-top:2px solid var(--ink);margin-top:3rem;}
   .proserv{display:flex;align-items:center;gap:.85rem;text-decoration:none;color:var(--ink);background:var(--cream);border:1.6px solid var(--cream);padding:.6rem 1rem;transition:opacity .25s;}
@@ -132,13 +153,13 @@
     <a class="back-link" href="index.html">&larr; Back to Red5Sorcery</a>
 
     <div class="eyebrow"><span class="star">&#10039;</span> Professional Services</div>
-    <h1 class="page-title">Jingles</h1>
-    <p class="page-lede">Custom jingles and audio branding for small businesses — written and produced with the latest AI music tools, then shaped by a human ear. Fast, affordable, and made to fit the room. <strong>Below are three proof-of-concept spots</strong> for real Halifax-area businesses. Press play.</p>
+    <h1 class="page-title">Made to Order</h1>
+    <p class="page-lede">Two things Red5Sorcery makes for other businesses: custom <strong>jingles and audio branding</strong>, and <strong>professional documents</strong> — from compliance work and reports to branded, data-driven books like almanacs, and more. Built fast, with decades of professional experience and modern AI tools behind each one. Below: hear the jingles, then see the documents.</p>
 
     <section>
       <div class="row-head">
-        <h2 class="row-title">Proof of Concept</h2>
-        <span class="row-sub">Three spots &middot; press play</span>
+        <h2 class="row-title">Jingles</h2>
+        <span class="row-sub">Proof of concept &middot; press play</span>
       </div>
 
       <div class="spots">
@@ -186,29 +207,62 @@
       </div>
     </section>
 
+    <section>
+      <div class="row-head">
+        <h2 class="row-title">Document Preparation</h2>
+        <span class="row-sub">Data, turned into something you can hold</span>
+      </div>
+      <p class="doc-intro">Professional document services for small businesses and solo professionals &mdash; compliance documents, reports, data-to-publication work, and strategic synthesis. Decades of professional experience meet modern AI methodology to compress timelines that would otherwise run for years.</p>
+      <p class="doc-intro">The same method builds <strong>branded, data-driven books</strong> &mdash; almanacs, reference volumes, yearbooks, and more. <strong>The almanacs below began as weekly chart data and a year of weather records</strong>, and ended as bound, designed volumes. If it lives in a spreadsheet, it can become a book with your name on the spine.</p>
+
+      <div class="docs">
+        <a class="doc" href="https://www.etsy.com/ca/listing/4503936169/the-music-bingo-almanac-united-kingdom" target="_blank" rel="noopener">
+          <div class="doc__img"><img src="https://i.etsystatic.com/52237751/r/il/eb1087/8060474273/il_1588xN.8060474273_bsww.jpg" alt="The Music Bingo Almanac cover" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='#1f1b16';"></div>
+          <div class="doc__cap"><div class="doc__t">The Music Bingo Almanac</div><div class="doc__s">From weekly UK chart data</div></div>
+        </a>
+        <a class="doc" href="https://www.etsy.com/ca/listing/4506295799/the-halifax-yhz-weather-almanac-2025" target="_blank" rel="noopener">
+          <div class="doc__img"><img src="https://i.etsystatic.com/52237751/r/il/5ad714/8075135329/il_1588xN.8075135329_l4vt.jpg" alt="The Halifax YHZ Weather Almanac 2025 cover" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='#1f1b16';"></div>
+          <div class="doc__cap"><div class="doc__t">Halifax YHZ Weather Almanac</div><div class="doc__s">From a year of observations</div></div>
+        </a>
+        <a class="doc" href="https://www.etsy.com/ca/listing/4506503900/the-toronto-yyz-weather-almanac-2025" target="_blank" rel="noopener">
+          <div class="doc__img"><img src="https://i.etsystatic.com/52237751/r/il/19ad8c/8028608544/il_1588xN.8028608544_8zia.jpg" alt="The Toronto YYZ Weather Almanac 2025 cover" loading="lazy" onerror="this.style.display='none';this.parentElement.style.background='#1f1b16';"></div>
+          <div class="doc__cap"><div class="doc__t">Toronto YYZ Weather Almanac</div><div class="doc__s">From a year of observations</div></div>
+        </a>
+      </div>
+
+      <blockquote class="tm">
+        <div class="tm__mark" aria-hidden="true">&ldquo;</div>
+        <p class="tm__q">What took our team 3 years of meetings, we completed in under 4 hours.</p>
+        <div class="tm__attr">
+          <span class="tm__name">Bill Cossitt</span>
+          <span class="tm__role">Mortgage Broker &middot; Dartmouth, Nova Scotia</span>
+        </div>
+      </blockquote>
+    </section>
+
     <div class="offer">
       <div class="offer__cell">
         <div class="offer__n">01</div>
-        <div class="offer__h">Tell us the room</div>
-        <p class="offer__p">The business, the vibe, the line you want people humming on the way out. A short brief is enough.</p>
+        <div class="offer__h">Tell us what you need</div>
+        <p class="offer__p">The business, the brief, the outcome &mdash; a jingle that sticks or a document that&rsquo;s finally done. A short note is enough.</p>
       </div>
       <div class="offer__cell">
         <div class="offer__n">02</div>
         <div class="offer__h">We produce options</div>
-        <p class="offer__p">AI music tools for speed and range, a human ear for taste — you hear a few directions, not one take-it-or-leave-it.</p>
+        <p class="offer__p">AI tools for speed and range, a human eye for taste and accuracy &mdash; you see a few directions, not one take-it-or-leave-it.</p>
       </div>
       <div class="offer__cell">
         <div class="offer__n">03</div>
-        <div class="offer__h">You own the spot</div>
-        <p class="offer__p">Delivered ready for socials, radio, in-store, or a phone hold line. Yours to run wherever it helps.</p>
+        <div class="offer__h">You own the result</div>
+        <p class="offer__p">A spot ready for socials, radio, or in-store &mdash; or a finished, designed document or book. Yours to use wherever it helps.</p>
       </div>
     </div>
 
     <div class="contact">
-      <h2>Hear one for your business</h2>
-      <p>If one of these fits the kind of thing you've been meaning to make, the next one could be yours. Tell us about the business and we'll send back a direction or two.</p>
-      <a class="btn btn-primary" href="mailto:Red5Sorcery@gmail.com?subject=Jingle%20enquiry">Start a conversation <span class="arr">&rarr;</span></a>
-      <p class="other">Beyond jingles: professional documents and branded assets for small businesses, on request.</p>
+      <h2>Start a project</h2>
+      <p>Whether it's a jingle that fills the room or a pile of data that needs to become a finished book, tell us about it and we'll send back a direction or two.</p>
+      <a class="btn btn-primary" href="mailto:Red5Sorcery@gmail.com?subject=Project%20enquiry">Start a conversation <span class="arr">&rarr;</span></a>
+      <p class="other">Jingles &middot; Professional documents &middot; Branded data-driven books &middot; and more</p>
     </div>
   </main>
 
