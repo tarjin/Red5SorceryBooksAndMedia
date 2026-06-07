@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Music Bingo Packs — Red5Sorcery</title>
+<meta name="description" content="Music Bingo Packs from Red5Sorcery — 800 printable bingo cards and four curated playlists per edition. For hosts, bars, and trivia nights. Instant download.">
+<meta property="og:title" content="Music Bingo Packs — Red5Sorcery">
+<meta property="og:description" content="800 printable cards and four playlists per edition. The UK Year-End series, 1987 through 1999, plus theme editions.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Special+Elite&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --surround:#181511;--panel:#1f1b16;--cream:#efe5cf;--ink:#14110c;
+    --blue:#16357c;--blue-bright:#7e9fe6;--muted:#a89a7e;--gold:#e0a51a;--gold-soft:#f0c45a;--red:#a8261f;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--surround);color:var(--cream);font-family:'Archivo',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.65;}
+  body::before{content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+  a{color:inherit;}
+
+  /* HEADER */
+  .site-header{display:flex;justify-content:space-between;align-items:flex-end;gap:1.5rem;flex-wrap:wrap;padding:clamp(1.1rem,2.6vw,2.3rem) clamp(1.3rem,4vw,3.2rem) clamp(.8rem,1.8vw,1.4rem);}
+  .wordmark{font-family:'Anton',sans-serif;line-height:.82;text-decoration:none;}
+  .wordmark .mark{display:block;font-size:clamp(1.9rem,4.4vw,3.4rem);letter-spacing:.005em;color:var(--cream);text-transform:uppercase;}
+  .wordmark .mark .five{color:var(--red);}
+  .wordmark .sub{display:flex;align-items:center;gap:.7rem;margin-top:.4rem;font-family:'Special Elite',monospace;font-size:clamp(.55rem,.9vw,.75rem);letter-spacing:.42em;text-transform:uppercase;color:var(--muted);}
+  .wordmark .sub::before,.wordmark .sub::after{content:"";height:1px;flex:1;background:#5a5142;min-width:14px;}
+  .header-right{text-align:right;}
+  .nav{display:flex;justify-content:flex-end;gap:clamp(1rem,2.1vw,2.1rem);font-family:'Special Elite',monospace;font-size:clamp(.72rem,1vw,.9rem);letter-spacing:.18em;text-transform:uppercase;}
+  .nav a{color:var(--cream);text-decoration:none;padding-bottom:2px;border-bottom:1.5px solid transparent;transition:border-color .25s;}
+  .nav a:hover{border-color:var(--gold);}
+  .thesis{margin-top:.7rem;font-family:'Special Elite',monospace;font-size:clamp(.58rem,.76vw,.72rem);letter-spacing:.26em;line-height:1.5;text-transform:uppercase;color:var(--muted);}
+  .thesis .star{color:var(--red);}
+
+  .wrap{max-width:1180px;margin:0 auto;padding:clamp(2.5rem,5vw,4.5rem) clamp(1.3rem,4vw,3rem);}
+  .back-link{display:inline-block;font-family:'Special Elite',monospace;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);text-decoration:none;margin-bottom:1.6rem;border-bottom:1px solid transparent;transition:all .25s;}
+  .back-link:hover{color:var(--gold);border-color:var(--gold);}
+
+  .eyebrow{font-family:'Special Elite',monospace;font-size:.78rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:1rem;margin-bottom:1.1rem;}
+  .eyebrow::before{content:"";width:34px;height:1px;background:var(--gold);opacity:.7;}
+  .page-title{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(2.4rem,7vw,5.5rem);line-height:.95;letter-spacing:.01em;}
+  .page-lede{color:var(--cream);max-width:60ch;margin-top:1.2rem;font-size:1.12rem;}
+
+  /* DETAILS BAR */
+  .details-bar{display:flex;flex-wrap:wrap;gap:1px;background:#332c22;border:1px solid #332c22;margin-top:2.4rem;}
+  .detail{flex:1;min-width:150px;background:var(--panel);padding:1.1rem 1.4rem;}
+  .detail-label{display:block;font-family:'Special Elite',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.35rem;}
+  .detail-value{font-size:.98rem;color:var(--cream);}
+
+  /* SERIES SECTION */
+  .series{margin-top:clamp(2.6rem,5vw,4rem);}
+  .series-head{display:flex;align-items:baseline;gap:1rem;flex-wrap:wrap;border-bottom:1px solid #332c22;padding-bottom:.9rem;margin-bottom:clamp(1.4rem,2.6vw,2rem);}
+  .series-title{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(1.4rem,3vw,2.1rem);letter-spacing:.02em;color:var(--cream);}
+  .series-sub{font-family:'Special Elite',monospace;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);}
+
+  /* SERIES SPEC CALLOUT */
+  .spec{padding:1.1rem 1.4rem;background:var(--panel);border:1px solid #332c22;border-left:3px solid var(--gold);font-size:.98rem;color:var(--cream);line-height:1.65;margin-bottom:clamp(1.4rem,2.6vw,2rem);}
+  .spec-label{display:block;font-family:'Special Elite',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.45rem;}
+  .spec b{color:var(--gold-soft);font-weight:700;}
+
+  /* GALLERY */
+  .gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:clamp(1.2rem,2.6vw,1.9rem);}
+  .pack-item{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;}
+  .pack-item.visible{opacity:1;transform:none;}
+  .pack-item__link{display:flex;flex-direction:column;background:var(--panel);border:1px solid #332c22;overflow:hidden;text-decoration:none;color:inherit;transition:transform .35s,border-color .35s,box-shadow .35s;height:100%;}
+  .pack-item__link:hover{transform:translateY(-5px);border-color:var(--gold);box-shadow:0 18px 40px rgba(0,0,0,.45);}
+  .pack-item__img{aspect-ratio:1/1;overflow:hidden;background:#0f0d0a;position:relative;}
+  .pack-item__img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s;}
+  .pack-item__link:hover .pack-item__img img{transform:scale(1.05);}
+  .pack-item__img.no-img::after{content:attr(data-label);position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:1.5rem;color:#6f6549;font-family:'Special Elite',monospace;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;background:var(--panel);}
+  .pack-item__body{padding:1.1rem 1.2rem 1.4rem;display:flex;flex-direction:column;gap:.4rem;flex:1;}
+  .pack-item__kind{font-family:'Special Elite',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);}
+  .pack-item__title{font-family:'Archivo',sans-serif;font-weight:700;font-size:1.16rem;line-height:1.22;letter-spacing:.005em;color:var(--cream);}
+  .pack-item__caption{font-family:'Special Elite',monospace;color:var(--muted);font-size:.86rem;line-height:1.5;flex:1;}
+  .pack-item__cta{display:inline-flex;align-items:center;gap:.5rem;margin-top:.5rem;font-family:'Special Elite',monospace;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cream);}
+  .pack-item__link:hover .pack-item__cta{color:var(--gold);}
+  .pack-item__cta .arr{transition:transform .3s;}
+  .pack-item__link:hover .pack-item__cta .arr{transform:translateX(5px);}
+
+  .coming-soon{margin-top:clamp(2.4rem,4vw,3.4rem);padding:1.6rem 1.8rem;border:1px dashed #4a4234;color:var(--muted);font-size:.98rem;text-align:center;}
+  .coming-soon strong{color:var(--cream);font-weight:700;}
+  .coming-soon a{color:var(--gold);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .25s;}
+  .coming-soon a:hover{border-color:var(--gold);}
+
+  /* ALMANACS */
+  #almanacList{display:flex;flex-direction:column;gap:1.2rem;}
+  .almanac{display:flex;gap:clamp(1.5rem,3.5vw,2.8rem);align-items:center;background:var(--panel);border:1px solid #332c22;border-left:3px solid var(--gold);padding:clamp(1.4rem,3vw,2.2rem);flex-wrap:wrap;}
+  .almanac__cover{flex:none;width:clamp(190px,30vw,230px);}
+  .almanac__cover a{display:block;overflow:hidden;border:1px solid #332c22;background:#0f0d0a;}
+  .almanac__cover img{width:100%;height:auto;object-fit:contain;display:block;transition:transform .5s;}
+  .almanac__cover a:hover img{transform:scale(1.04);}
+  .almanac__body{flex:1;min-width:280px;}
+  .almanac__kind{font-family:'Special Elite',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);}
+  .almanac__title{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(1.5rem,3.4vw,2.1rem);line-height:1.04;letter-spacing:.01em;margin:.4rem 0 .15rem;}
+  .almanac__sub{font-family:'Special Elite',monospace;font-size:.82rem;letter-spacing:.06em;color:var(--gold-soft);margin-bottom:.9rem;}
+  .almanac__desc{color:var(--muted);font-size:.98rem;line-height:1.65;margin-bottom:1.2rem;}
+  .almanac__ctas{display:flex;gap:.8rem;flex-wrap:wrap;}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.72rem 1.2rem;font-family:'Special Elite',monospace;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;transition:all .25s;}
+  .btn-primary{background:var(--gold);color:var(--ink);}
+  .btn-primary:hover{background:var(--gold-soft);}
+  .btn-secondary{border:1.5px solid #5a5142;color:var(--cream);}
+  .btn-secondary:hover{border-color:var(--gold);color:var(--gold);}
+  .btn .arr{transition:transform .3s;}
+  .btn:hover .arr{transform:translateX(4px);}
+
+  /* FOOTER */
+  .credits{display:flex;align-items:center;gap:clamp(1.2rem,3vw,2.6rem);flex-wrap:wrap;padding:clamp(1.4rem,2.6vw,2rem) clamp(1.3rem,4vw,3.2rem);background:var(--surround);border-top:2px solid var(--ink);margin-top:2rem;}
+  .proserv{display:flex;align-items:center;gap:.85rem;text-decoration:none;color:var(--cream);border:1.6px solid #5a5142;padding:.6rem 1rem;transition:background .25s,color .25s;}
+  .proserv:hover{background:var(--cream);color:var(--ink);}
+  .proserv .ps-star{font-size:1.2rem;line-height:1;color:var(--red);}
+  .proserv .ps-name{font-family:'Anton',sans-serif;letter-spacing:.04em;text-transform:uppercase;font-size:.9rem;line-height:1;}
+  .proserv .ps-desc{font-family:'Special Elite',monospace;font-size:.6rem;letter-spacing:.06em;line-height:1.3;display:block;margin-top:3px;opacity:.8;}
+  .proserv .ps-arrow{margin-left:.4rem;font-size:1.1rem;}
+  .credits-links{display:flex;gap:clamp(1rem,2vw,1.9rem);font-family:'Special Elite',monospace;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;flex-wrap:wrap;}
+  .credits-links a{color:var(--cream);text-decoration:none;border-bottom:1.5px solid transparent;padding-bottom:2px;transition:border-color .25s;}
+  .credits-links a:hover{border-color:var(--gold);}
+  .credits-right{margin-left:auto;display:flex;align-items:center;gap:1.1rem;}
+  .copy{font-family:'Special Elite',monospace;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);line-height:1.6;text-align:right;}
+  .stamp{flex:none;width:52px;height:52px;border:2px solid var(--red);border-radius:50%;display:grid;place-items:center;font-family:'Anton',sans-serif;color:var(--red);font-size:1.1rem;transform:rotate(-8deg);opacity:.85;}
+
+  @media(max-width:820px){
+    .site-header{flex-direction:column;align-items:center;text-align:center;}
+    .header-right{text-align:center;}.nav{justify-content:center;}.thesis{text-align:center;}
+    .credits{flex-direction:column;align-items:flex-start;}.credits-right{margin-left:0;}
+  }
+</style>
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="wordmark" href="index.html">
+      <span class="mark">Red<span class="five">5</span>Sorcery</span>
+      <span class="sub">Books &amp; Media</span>
+    </a>
+    <div class="header-right">
+            <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="black-cat-diaries.html">Black Cat Diaries</a>
+        <a href="music-bingo.html">Music Bingo</a>
+        <a href="books.html">Books</a>
+        <a href="about.html">About</a>
+      </nav>
+      <p class="thesis">Art. Science. Boutique Shop.<br>One mind. <span class="star">&#10039;</span> Many facets.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <a class="back-link" href="index.html">&larr; Back to Red5Sorcery</a>
+
+    <div class="eyebrow">The Game Line</div>
+    <h1 class="page-title">Music Bingo</h1>
+    <p class="page-lede">Eight hundred printable bingo cards and four curated playlists per edition. Built for hosts, bars, and trivia nights — instant download, print as many as you need.</p>
+
+    <div class="details-bar">
+      <div class="detail"><span class="detail-label">Cards</span><span class="detail-value">1,000 per edition</span></div>
+      <div class="detail"><span class="detail-label">Playlists</span><span class="detail-value">5 per edition (4 + bonus)</span></div>
+      <div class="detail"><span class="detail-label">Format</span><span class="detail-value">Printable PDF</span></div>
+      <div class="detail"><span class="detail-label">Delivery</span><span class="detail-value">Instant download</span></div>
+    </div>
+
+    <section class="series">
+      <div class="series-head">
+        <h2 class="series-title">UK Year-End Series</h2>
+        <span class="series-sub">OCC Top 40 &middot; two years per pack &middot; 1980 &rarr; 1999</span>
+      </div>
+      <div class="spec">
+        <span class="spec-label">Inside every UK pack</span>
+        An 80-song pool per edition. Four 50-song playlists generate <b>800 unique cards</b>, plus a 75-song bonus marathon playlist for <b>200 more</b> — five playlists and a thousand cards, drawn from the same eighty songs, for one decade-defining night.
+      </div>
+      <div class="gallery-grid" id="ukGrid"></div>
+    </section>
+
+    <section class="series">
+      <div class="series-head">
+        <h2 class="series-title">Theme Editions</h2>
+        <span class="series-sub">A vibe, not a year</span>
+      </div>
+      <div class="gallery-grid" id="themeGrid"></div>
+    </section>
+
+    <div class="coming-soon">
+      <strong>More editions on the way.</strong> &nbsp;The catalogue runs deeper than what's shown here — decades, duets, alternative, and Billboard editions are all live. <a href="https://thesocialcredit.etsy.com" target="_blank" rel="noopener">See the full shop on Etsy &rarr;</a>
+    </div>
+
+    <section class="series">
+      <div class="series-head">
+        <h2 class="series-title">Almanacs</h2>
+        <span class="series-sub">The reference shelf &middot; heritage chart data, bound</span>
+      </div>
+      <div id="almanacList"></div>
+    </section>
+  </main>
+
+  <footer class="credits">
+    <a class="proserv" href="professional-services.html">
+      <span class="ps-star">&#10039;</span>
+      <span><span class="ps-name">Professional Services</span><span class="ps-desc">Jingles &middot; Professional documents &middot; Branded assets</span></span>
+      <span class="ps-arrow">&rarr;</span>
+    </a>
+        <nav class="credits-links">
+      <a href="about.html">About</a>
+      <a href="about.html#contact">Contact</a>
+      <a href="https://thesocialcredit.etsy.com" target="_blank" rel="noopener">Etsy</a>
+    </nav>
+    <div class="credits-right">
+      <p class="copy">&copy; Red5Sorcery 2025<br>Halifax &middot; Nova Scotia</p>
+      <span class="stamp">R5</span>
+    </div>
+  </footer>
+
+<script>
+  /* ==========================================================
+     MUSIC BINGO CATALOGUE
+     ----------------------------------------------------------
+     Two arrays, two on-page sections.
+       UK_PACKS    -> "UK Year-End Series" (keep chronological)
+       THEME_PACKS -> "Theme Editions"
+     To add a pack: append an object to the right array.
+     Fields: image, kind, title, etsyUrl, (optional) caption
+     ========================================================== */
+
+  const UK_PACKS = [
+    { image:"https://i.etsystatic.com/52237751/r/il/8efaa1/8146940461/il_1588xN.8146940461_pwsn.jpg", kind:"UK · Best of 1980–1999", title:"UK 80s & 90s Best Of", caption:"The top four of every year, 1980 to 1999. Twenty years distilled to eighty songs — the whole run in one pack.", etsyUrl:"https://www.etsy.com/ca/listing/4516642994/music-bingo-uk-80s-90s-best-of-1980-1999" },
+    { image:"https://i.etsystatic.com/52237751/r/il/b2f1cf/8134593195/il_1588xN.8134593195_k13o.jpg", kind:"UK · Year-End Top 40", title:"UK Year-End '80–'81", caption:"Two-tone and new romantics, the new decade dawning. The Specials, Adam Ant, and synths on the rise.", etsyUrl:"https://www.etsy.com/ca/listing/4514857065/music-bingo-uk-year-end-1980-1981-800" },
+    { image:"https://i.etsystatic.com/52237751/r/il/b0d751/8134680751/il_1588xN.8134680751_gptq.jpg", kind:"UK · Year-End Top 40", title:"UK Year-End '81–'82", caption:"Synth-pop takes the chart. The Human League, Soft Cell, and Dexys' summer of Eileen.", etsyUrl:"https://www.etsy.com/ca/listing/4514870530/music-bingo-uk-year-end-1981-1982-800" },
+    { image:"https://i.etsystatic.com/52237751/r/il/743c2f/8086822490/il_1588xN.8086822490_5nhj.jpg", kind:"UK · Year-End Top 40", title:"UK Year-End '82–'83", caption:"New pop in full colour. Culture Club, Eurythmics, and Spandau Ballet's True.", etsyUrl:"https://www.etsy.com/ca/listing/4514877998/music-bingo-uk-year-end-1982-1983-800" },
+    { image:"https://i.etsystatic.com/52237751/r/il/46753f/8134811111/il_1588xN.8134811111_fcxd.jpg", kind:"UK · Year-End Top 40", title:"UK Year-End '83–'84", caption:"Frankie says Relax. Wham!, Band Aid, and the year pop got loud.", etsyUrl:"https://www.etsy.com/ca/listing/4514890686/music-bingo-uk-year-end-1983-1984-800" },
+    { image:"https://i.etsystatic.com/52237751/r/il/381f2a/8086974076/il_1588xN.8086974076_ixqj.jpg", kind:"UK · Year-End Top 40", title:"UK Year-End '84–'85", caption:"The Live Aid year. a-ha, Dead or Alive, and stadium-sized pop.", etsyUrl:"https://www.etsy.com/ca/listing/4514900139/music-bingo-uk-year-end-1984-1985-800" },
+    { image:"https://i.etsystatic.com/52237751/r/il/9b5fb2/8087026314/il_1588xN.8087026314_hffk.jpg", kind:"UK · Year-End Top 40", title:"UK Year-End '85–'86", caption:"Pet Shop Boys arrive, Wham! say goodbye, and the chart goes pure pop.", etsyUrl:"https://www.etsy.com/ca/listing/4514907922/music-bingo-uk-year-end-1985-1986-800" },
+    { image:"https://i.etsystatic.com/52237751/r/il/4596d0/8087088040/il_1588xN.8087088040_fcac.jpg", kind:"UK · Year-End Top 40", title:"UK Year-End '86–'87", caption:"The Hit Factory ascends. Rick Astley, Mel & Kim, and Stock Aitken Waterman take over.", etsyUrl:"https://www.etsy.com/ca/listing/4514916516/music-bingo-uk-year-end-1986-1987-800" },
+    { image:"https://i.etsystatic.com/52237751/r/il/03c715/8029277922/il_1588xN.8029277922_4cl6.jpg", kind:"UK · Year-End Top 40", title:"UK Year-End '87–'88", caption:"Class of '88 reunion. 80s pub night gold.", etsyUrl:"https://www.etsy.com/ca/listing/4506594886/music-bingo-uk-year-end-1987-1988-800" },
+    { image:"https://i.etsystatic.com/52237751/r/il/e2ec77/8029484922/il_1588xN.8029484922_2i0q.jpg", kind:"UK · Year-End Top 40", title:"UK Year-End '88–'89", caption:"Class of '89. Kylie, Black Box, and the last gasp of the decade.", etsyUrl:"https://www.etsy.com/ca/listing/4506617287/music-bingo-uk-year-end-1988-1989-800" },
+    { image:"https://i.etsystatic.com/52237751/r/il/2edb89/8080182041/il_1588xN.8080182041_g1zf.jpg", kind:"UK · Year-End Top 40", title:"UK Year-End '89–'90", caption:"Class of '90 reunion pack. The OCC Top 40 crosses the decade.", etsyUrl:"https://www.etsy.com/ca/listing/4507078570/music-bingo-uk-year-end-1989-1990-800" },
+    { image:"https://i.etsystatic.com/52237751/r/il/b93c37/8032385740/il_1588xN.8032385740_njr0.jpg", kind:"UK · Year-End Top 40", title:"UK Year-End '90–'91", caption:"Bryan Adams to Madchester. Stadium rave meets baggy.", etsyUrl:"https://www.etsy.com/ca/listing/4507087669/music-bingo-uk-1990-1991-800-printable" },
+    { image:"https://i.etsystatic.com/52237751/r/il/11fa17/8080437833/il_1588xN.8080437833_l7r7.jpg", kind:"UK · Year-End Top 40", title:"UK Year-End '91–'92", caption:"Whitney, Queen, and the eurodance boom in full bloom.", etsyUrl:"https://www.etsy.com/ca/listing/4507113352/music-bingo-uk-1991-1992-800-printable" },
+    { image:"https://i.etsystatic.com/52237751/r/il/04b29b/8080528071/il_1588xN.8080528071_6feb.jpg", kind:"UK · Year-End Top 40", title:"UK Year-End '92–'93", caption:"Back to the club classics. Whigfield's coming, but Take That got there first.", etsyUrl:"https://www.etsy.com/ca/listing/4507120795/music-bingo-uk-year-end-1992-1993-800" },
+    { image:"https://i.etsystatic.com/52237751/r/il/cd087d/8032735206/il_1588xN.8032735206_9mqo.jpg", kind:"UK · Year-End Top 40", title:"UK Year-End '93–'94", caption:"Wet Wet Wet held the summer. Take That, D:Ream, and the dancefloor held the rest.", etsyUrl:"https://www.etsy.com/ca/listing/4507138507/music-bingo-uk-1993-1994-800-printable" },
+    { image:"https://i.etsystatic.com/52237751/r/il/477b8a/8080845735/il_1588xN.8080845735_5zty.jpg", kind:"UK · Year-End Top 40", title:"UK Year-End '94–'95", caption:"Britpop arrives. Oasis and Take That share the year, two chart straddlers in one pack.", etsyUrl:"https://www.etsy.com/ca/listing/4507166849/music-bingo-uk-1994-1995-800-printable" },
+    { image:"https://i.etsystatic.com/52237751/r/il/c19b5e/8037568762/il_1588xN.8037568762_p632.jpg", kind:"UK · Year-End Top 40", title:"UK Year-End '95–'96", caption:"Spice Girls debut, Take That split. Britpop hits peak and the chart changes hands.", etsyUrl:"https://www.etsy.com/ca/listing/4507886530/music-bingo-uk-1995-1996-800-printable" },
+    { image:"https://i.etsystatic.com/52237751/r/il/61f031/8085611227/il_1588xN.8085611227_5glz.jpg", kind:"UK · Year-End Top 40", title:"UK Year-End '96–'97", caption:"Spice Girls at peak, Candle in the Wind '97, and Britpop's last big year.", etsyUrl:"https://www.etsy.com/ca/listing/4507907278/music-bingo-uk-1996-1997-800-printable" },
+    { image:"https://i.etsystatic.com/52237751/r/il/3e129a/8039008062/il_1588xN.8039008062_bfbu.jpg", kind:"UK · Year-End Top 40", title:"UK Year-End '97–'98", caption:"Class of '98. Cher's Believe ushers in the Auto-Tune era, and the pub night begins.", etsyUrl:"https://www.etsy.com/ca/listing/4508108296/music-bingo-uk-year-end-1997-1998-800" },
+    { image:"https://i.etsystatic.com/52237751/r/il/19997c/8087004203/il_1588xN.8087004203_1vx5.jpg", kind:"UK · Year-End Top 40", title:"UK Year-End '98–'99", caption:"The Y2K run-in. Britney arrives, boy bands rule, and the millennium party warms up.", etsyUrl:"https://www.etsy.com/ca/listing/4508117791/music-bingo-uk-year-end-1998-1999-800" }
+  ];
+
+  const THEME_PACKS = [
+    { image:"https://i.etsystatic.com/52237751/r/il/d39c9b/8068883021/il_1588xN.8068883021_klvn.jpg", kind:"Theme Edition", title:"Yacht Rock", caption:"Smooth, soft, sun-bleached.", etsyUrl:"https://www.etsy.com/ca/listing/4505352234/music-bingo-yacht-rock-edition-800" }
+  ];
+
+  /* ALMANACS — companion reference books.
+     Fields: image, region, title, sub, desc, (optional) blurbUrl, etsyUrl */
+  const ALMANACS = [
+    {
+      image:"https://i.etsystatic.com/52237751/r/il/eb1087/8060474273/il_1588xN.8060474273_bsww.jpg",
+      region:"Reference · United Kingdom",
+      title:"The Music Bingo Almanac",
+      sub:"United Kingdom Countdown · The 1980s",
+      desc:"Built from weekly UK Singles Chart data, this almanac ranks the songs that spent the most time on the chart across the decade — the hits that dominated, lingered, returned, and became part of the shared memory of the British ’80s. Made for music bingo hosts, pub quiz nights, trivia lovers, and anyone who remembers a decade by the songs everyone knew.",
+      blurbUrl:"https://www.blurb.ca/b/12875727-the-music-bingo-almanac-united-kingdom-edition-19",
+      etsyUrl:"https://www.etsy.com/ca/listing/4503936169/the-music-bingo-almanac-united-kingdom"
+    },
+    {
+      image:"https://i.etsystatic.com/52237751/r/il/15054d/8081991686/il_1588xN.8081991686_b819.jpg",
+      region:"Reference · Canada",
+      title:"The Music Bingo Almanac",
+      sub:"Canadian Edition · The 1980s",
+      desc:"Built from weekly Canadian singles chart data, this almanac ranks the songs that spent the most time on the chart across the decade — the hits that ruled Canadian radio, from homegrown acts to the international stars everyone knew by heart. Made for music bingo hosts, pub quiz nights, trivia lovers, and anyone who remembers a decade by the songs everyone knew.",
+      blurbUrl:"https://www.blurb.ca/b/12898115-the-music-bingo-almanac-canadian-edition-1980s",
+      etsyUrl:"https://www.etsy.com/ca/listing/4502441414/the-music-bingo-almanac-canadian-edition"
+    }
+  ];
+
+  const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+  function renderPacks(list, mountId){
+    const grid = document.getElementById(mountId);
+    if(!grid) return;
+    list.forEach(pack => {
+      const el = document.createElement('article');
+      el.className = 'pack-item';
+      const cap = pack.caption ? `<p class="pack-item__caption">${esc(pack.caption)}</p>` : '';
+      el.innerHTML = `
+        <a class="pack-item__link" href="${esc(pack.etsyUrl)}" target="_blank" rel="noopener" aria-label="Shop ${esc(pack.title)} on Etsy">
+          <div class="pack-item__img">
+            <img src="${esc(pack.image)}" alt="${esc(pack.title)} — Music Bingo pack cover" loading="lazy"
+                 onerror="this.style.display='none';this.parentElement.classList.add('no-img');this.parentElement.dataset.label='Cover loads on the live site';">
+          </div>
+          <div class="pack-item__body">
+            <span class="pack-item__kind">${esc(pack.kind)}</span>
+            <h3 class="pack-item__title">${esc(pack.title)}</h3>
+            ${cap}
+            <span class="pack-item__cta">Shop on Etsy <span class="arr">&rarr;</span></span>
+          </div>
+        </a>`;
+      grid.appendChild(el);
+    });
+  }
+
+  renderPacks(UK_PACKS, 'ukGrid');
+  renderPacks(THEME_PACKS, 'themeGrid');
+
+  function renderAlmanacs(list, mountId){
+    const wrap = document.getElementById(mountId);
+    if(!wrap) return;
+    list.forEach(a => {
+      const blurb = a.blurbUrl ? `<a class="btn btn-primary" href="${esc(a.blurbUrl)}" target="_blank" rel="noopener">Buy on Blurb <span class="arr">&rarr;</span></a>` : '';
+      const etsy = a.etsyUrl ? `<a class="btn ${a.blurbUrl ? 'btn-secondary' : 'btn-primary'}" href="${esc(a.etsyUrl)}" target="_blank" rel="noopener">Shop on Etsy <span class="arr">&rarr;</span></a>` : '';
+      const link = esc(a.etsyUrl || a.blurbUrl || '#');
+      const el = document.createElement('div');
+      el.className = 'almanac';
+      el.innerHTML = `
+        <div class="almanac__cover">
+          <a href="${link}" target="_blank" rel="noopener" aria-label="${esc(a.title)} — ${esc(a.sub)}">
+            <img src="${esc(a.image)}" alt="${esc(a.title)} — ${esc(a.sub)}, front cover" loading="lazy"
+                 onerror="this.style.display='none';this.parentElement.style.background='#1f1b16';">
+          </a>
+        </div>
+        <div class="almanac__body">
+          <span class="almanac__kind">${esc(a.region)}</span>
+          <h3 class="almanac__title">${esc(a.title)}</h3>
+          <p class="almanac__sub">${esc(a.sub)}</p>
+          <p class="almanac__desc">${esc(a.desc)}</p>
+          <div class="almanac__ctas">${blurb}${etsy}</div>
+        </div>`;
+      wrap.appendChild(el);
+    });
+  }
+  renderAlmanacs(ALMANACS, 'almanacList');
+
+  const io = new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -50px 0px'});
+  document.querySelectorAll('.pack-item').forEach((el,i)=>{el.style.transitionDelay=(i%4*0.05)+'s';io.observe(el);});
+</script>
+</body>
+</html>
