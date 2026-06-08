@@ -164,6 +164,22 @@
 
     <section class="series">
       <div class="series-head">
+        <h2 class="series-title">Theme Editions</h2>
+        <span class="series-sub">A vibe, not a year</span>
+      </div>
+      <div class="gallery-grid" id="themeGrid"></div>
+    </section>
+
+    <section class="series">
+      <div class="series-head">
+        <h2 class="series-title">Artist Editions</h2>
+        <span class="series-sub">One act, one night &middot; a whole catalogue per pack</span>
+      </div>
+      <div class="gallery-grid" id="artistGrid"></div>
+    </section>
+
+    <section class="series">
+      <div class="series-head">
         <h2 class="series-title">UK Year-End Series</h2>
         <span class="series-sub">OCC Top 40 &middot; two years per pack &middot; 1980 &rarr; 1999</span>
       </div>
@@ -172,14 +188,6 @@
         An 80-song pool per edition. Four 50-song playlists generate <b>800 unique cards</b>, plus a 75-song bonus marathon playlist for <b>200 more</b> — five playlists and a thousand cards, drawn from the same eighty songs, for one decade-defining night.
       </div>
       <div class="gallery-grid" id="ukGrid"></div>
-    </section>
-
-    <section class="series">
-      <div class="series-head">
-        <h2 class="series-title">Theme Editions</h2>
-        <span class="series-sub">A vibe, not a year</span>
-      </div>
-      <div class="gallery-grid" id="themeGrid"></div>
     </section>
 
     <div class="coming-soon">
@@ -246,7 +254,14 @@
     { image:"https://i.etsystatic.com/52237751/r/il/19997c/8087004203/il_1588xN.8087004203_1vx5.jpg", kind:"UK · Year-End Top 40", title:"UK Year-End '98–'99", caption:"The Y2K run-in. Britney arrives, boy bands rule, and the millennium party warms up.", etsyUrl:"https://www.etsy.com/ca/listing/4508117791/music-bingo-uk-year-end-1998-1999-800" }
   ];
 
+  const ARTIST_PACKS = [
+    { image:"https://i.etsystatic.com/52237751/r/il/5afaf9/8160690109/il_1588xN.8160690109_qkjv.jpg", kind:"Artist · King of Pop", title:"Michael Jackson", caption:"Off the Wall to HIStory — the catalogue the whole room already knows by heart.", etsyUrl:"https://www.etsy.com/ca/listing/4518551332/michael-jackson-music-bingo-king-of-pop" },
+    { image:"https://i.etsystatic.com/52237751/r/il/1ca87c/8112626838/il_1588xN.8112626838_9jef.jpg", kind:"Artist · 1980–1993", title:"U2", caption:"Boy to Zooropa. Post-punk earnestness to ironic art-rock, thirteen years deep.", etsyUrl:"https://www.etsy.com/ca/listing/4518528463/u2-music-bingo-1980-to-1993-boy-to" },
+    { image:"https://i.etsystatic.com/52237751/r/il/b67f38/8112468998/il_1588xN.8112468998_bycm.jpg", kind:"Artist · Pop Era", title:"Taylor Swift", caption:"1989 through Midnights — the full pop-era run, no skips.", etsyUrl:"https://www.etsy.com/ca/listing/4518510194/taylor-swift-music-bingo-pop-era-1989-to" }
+  ];
+
   const THEME_PACKS = [
+    { image:"https://i.etsystatic.com/52237751/r/il/60639e/8112887828/il_1588xN.8112887828_7vpg.jpg", kind:"Theme Edition", title:"Songs of Summer", caption:"Top down, windows open — the songs that only mean one season.", etsyUrl:"https://www.etsy.com/ca/listing/4518567453/summer-music-bingo-songs-of-summer-80" },
     { image:"https://i.etsystatic.com/52237751/r/il/d39c9b/8068883021/il_1588xN.8068883021_klvn.jpg", kind:"Theme Edition", title:"Yacht Rock", caption:"Smooth, soft, sun-bleached.", etsyUrl:"https://www.etsy.com/ca/listing/4505352234/music-bingo-yacht-rock-edition-800" }
   ];
 
@@ -299,8 +314,9 @@
     });
   }
 
-  renderPacks(UK_PACKS, 'ukGrid');
   renderPacks(THEME_PACKS, 'themeGrid');
+  renderPacks(ARTIST_PACKS, 'artistGrid');
+  renderPacks(UK_PACKS, 'ukGrid');
 
   function renderAlmanacs(list, mountId){
     const wrap = document.getElementById(mountId);
