@@ -87,6 +87,30 @@
   .btn .arr{transition:transform .3s;}
   .btn:hover .arr{transform:translateX(4px);}
 
+  /* WORK BLOCK */
+  .wb{margin-top:clamp(2.4rem,5vw,3.4rem);background:var(--panel);border:1px solid #332c22;border-left:3px solid var(--gold);padding:clamp(1.6rem,3.4vw,2.6rem);display:flex;align-items:flex-start;gap:clamp(1.3rem,3vw,2rem);flex-wrap:wrap;}
+  .wb__cover{flex:0 0 clamp(200px,27%,300px);display:block;border:1px solid #332c22;background:#0f0d0a;overflow:hidden;text-decoration:none;}
+  .wb__cover img{width:100%;height:auto;display:block;opacity:.95;transition:transform .5s,opacity .35s;}
+  .wb__cover:hover img{transform:scale(1.03);opacity:1;}
+  .wb__main{flex:1;min-width:min(100%,290px);}
+  .wb__top{display:flex;align-items:flex-start;justify-content:space-between;gap:1.6rem;flex-wrap:wrap;padding-bottom:1.3rem;border-bottom:1px solid #332c22;}
+  .wb__price{font-family:'Anton',sans-serif;line-height:.9;}
+  .wb__price .num{font-size:clamp(2.8rem,7vw,4.6rem);color:var(--cream);}
+  .wb__price .cad{font-size:clamp(1rem,2.2vw,1.5rem);color:var(--gold);margin-left:.25rem;letter-spacing:.02em;}
+  .wb__price .unit{display:block;font-family:'Special Elite',monospace;font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-top:.55rem;}
+  .wb__price .tag{display:block;font-family:'Special Elite',monospace;font-size:.74rem;color:var(--muted);margin-top:.3rem;}
+  .wb__avail{text-align:right;max-width:26ch;}
+  .wb__avail-k{display:block;font-family:'Special Elite',monospace;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--red-bright);}
+  .wb__avail-v{display:block;font-family:'Archivo',sans-serif;font-weight:700;font-size:1rem;color:var(--cream);margin-top:.35rem;line-height:1.3;}
+  .wb__avail-n{display:block;font-family:'Special Elite',monospace;font-size:.72rem;color:var(--muted);margin-top:.35rem;line-height:1.5;}
+  .wb__services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:#332c22;border:1px solid #332c22;margin-top:1.4rem;}
+  .wb__svc{background:var(--panel);padding:1rem 1.15rem;}
+  .wb__svc-t{font-family:'Archivo',sans-serif;font-weight:700;font-size:.98rem;color:var(--cream);line-height:1.25;}
+  .wb__svc-d{font-family:'Special Elite',monospace;font-size:.72rem;color:var(--gold);margin-top:.3rem;line-height:1.45;}
+  .wb__cta{margin-top:1.5rem;display:flex;align-items:center;gap:1.1rem;flex-wrap:wrap;}
+  .wb__cta-note{font-family:'Special Elite',monospace;font-size:.74rem;color:var(--muted);line-height:1.5;max-width:40ch;}
+  @media(max-width:640px){.wb{flex-direction:column;}.wb__cover{flex-basis:auto;max-width:300px;align-self:center;}.wb__avail{text-align:left;}}
+
   /* DOCUMENT PREPARATION */
   .doc-intro{color:var(--soft);max-width:66ch;font-size:1.04rem;line-height:1.75;margin-bottom:1.05rem;}
   .doc-intro strong{color:var(--cream);font-weight:600;}
@@ -240,6 +264,47 @@
       </blockquote>
     </section>
 
+    <section>
+      <div class="row-head">
+        <h2 class="row-title">Work Blocks</h2>
+        <span class="row-sub">Too busy? Book a focused half-hour</span>
+      </div>
+
+      <div class="wb">
+        <a class="wb__cover" href="https://www.etsy.com/ca/listing/4518745964/30-minute-professional-work-block" target="_blank" rel="noopener" aria-label="View the 30-Minute Professional Work Block listing on Etsy">
+          <img src="https://i.etsystatic.com/52237751/r/il/9803ae/8161981397/il_1588xN.8161981397_15fn.jpg" alt="Too Busy? I Can Help &mdash; Red5Sorcery 30-minute professional work block" loading="lazy" onerror="this.style.display='none';this.parentElement.style.minHeight='200px';">
+        </a>
+        <div class="wb__main">
+          <div class="wb__top">
+            <div class="wb__price">
+              <span class="num">$50</span><span class="cad">CAD</span>
+              <span class="unit">30-Minute Work Block</span>
+              <span class="tag">Focused help. Real results.</span>
+            </div>
+            <div class="wb__avail">
+              <span class="wb__avail-k">Limited availability</span>
+              <span class="wb__avail-v">A maximum of 5 hours of client work each week</span>
+              <span class="wb__avail-n">When the week&rsquo;s blocks are booked, they&rsquo;re gone &mdash; reserve yours early.</span>
+            </div>
+          </div>
+
+          <div class="wb__services">
+            <div class="wb__svc"><div class="wb__svc-t">Consulting &amp; Strategy</div><div class="wb__svc-d">Positioning. Planning. AI strategy.</div></div>
+            <div class="wb__svc"><div class="wb__svc-t">Annual &amp; Board Reports</div><div class="wb__svc-d">Clear. Professional. Impactful.</div></div>
+            <div class="wb__svc"><div class="wb__svc-t">Editing &amp; Proofreading</div><div class="wb__svc-d">Polished. Error-free. Professional.</div></div>
+            <div class="wb__svc"><div class="wb__svc-t">AI-Assisted Research</div><div class="wb__svc-d">Smart insights. Better decisions.</div></div>
+            <div class="wb__svc"><div class="wb__svc-t">Publishing</div><div class="wb__svc-d">Print &amp; digital. Professional layout.</div></div>
+            <div class="wb__svc"><div class="wb__svc-t">Events &amp; Music Bingo</div><div class="wb__svc-d">Cards, packs &amp; playlists for your venue.</div></div>
+          </div>
+
+          <div class="wb__cta">
+            <a class="btn btn-primary" href="https://www.etsy.com/ca/listing/4518745964/30-minute-professional-work-block" target="_blank" rel="noopener">Book a work block on Etsy <span class="arr">&rarr;</span></a>
+            <span class="wb__cta-note">Not sure how many you need? Stack several for a bigger job, or start a custom project below &mdash; message first and we&rsquo;ll scope it.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <div class="offer">
       <div class="offer__cell">
         <div class="offer__n">01</div>
@@ -278,7 +343,7 @@
       <a href="https://thesocialcredit.etsy.com" target="_blank" rel="noopener">Etsy</a>
     </nav>
     <div class="credits-right">
-      <p class="copy">&copy; Red5Sorcery 2025<br>Halifax &middot; Nova Scotia</p>
+      <p class="copy">&copy; Red5Sorcery 2026<br>Halifax &middot; Nova Scotia</p>
       <span class="stamp">R5</span>
     </div>
   </footer>
