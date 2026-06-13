@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Music Bingo Packs — Red5Sorcery</title>
-<meta name="description" content="Music Bingo Packs from Red5Sorcery — 800 printable bingo cards and four curated playlists per edition. For hosts, bars, and trivia nights. Instant download.">
+<meta name="description" content="Music Bingo Packs from Red5Sorcery — unless otherwise stated, 800 printable bingo cards and four curated playlists per edition. For hosts, bars, and trivia nights. Instant download.">
 <meta property="og:title" content="Music Bingo Packs — Red5Sorcery">
-<meta property="og:description" content="800 printable cards and four playlists per edition. The UK Year-End series, 1987 through 1999, plus theme editions.">
+<meta property="og:description" content="Unless otherwise stated, 800 printable cards and four playlists per edition. The UK Year-End series, 1987 through 1999, plus theme editions.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -107,6 +107,24 @@
   .btn .arr{transition:transform .3s;}
   .btn:hover .arr{transform:translateX(4px);}
 
+  /* FEATURED EDITION */
+  .feature{display:flex;gap:clamp(1.5rem,3.5vw,2.8rem);align-items:center;background:var(--panel);border:1px solid #332c22;border-left:4px solid var(--red);padding:clamp(1.6rem,3.2vw,2.4rem);flex-wrap:wrap;margin-top:2.4rem;}
+  .feature__cover{flex:none;width:clamp(200px,30vw,248px);display:block;overflow:hidden;border:1px solid #332c22;background:#0f0d0a;text-decoration:none;}
+  .feature__cover img{width:100%;height:auto;object-fit:cover;display:block;transition:transform .5s;}
+  .feature__cover:hover img{transform:scale(1.04);}
+  .feature__cover.no-img{display:grid;place-items:center;aspect-ratio:1/1;}
+  .feature__cover.no-img::after{content:attr(data-label);text-align:center;padding:1.5rem;color:#6f6549;font-family:'Special Elite',monospace;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;}
+  .feature__body{flex:1;min-width:300px;}
+  .feature__kind{font-family:'Special Elite',monospace;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);}
+  .feature__kind .star{color:var(--red);}
+  .feature__title{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(1.9rem,4.6vw,3.1rem);line-height:1;letter-spacing:.01em;margin:.35rem 0 .25rem;color:var(--cream);}
+  .feature__sub{font-family:'Special Elite',monospace;font-size:.82rem;letter-spacing:.05em;color:var(--gold-soft);margin-bottom:1rem;}
+  .feature__desc{color:var(--cream);font-size:1.02rem;line-height:1.66;margin-bottom:1.1rem;max-width:64ch;}
+  .feature__desc b{color:var(--gold-soft);font-weight:700;}
+  .feature__charity{background:rgba(168,38,31,.10);border:1px solid rgba(168,38,31,.38);border-left:3px solid var(--red);padding:.9rem 1.1rem;margin-bottom:1.2rem;font-size:.93rem;line-height:1.62;color:var(--cream);max-width:64ch;}
+  .feature__charity strong{color:var(--gold-soft);font-weight:700;}
+  .feature__ctas{display:flex;gap:.8rem;flex-wrap:wrap;}
+
   /* FOOTER */
   .credits{display:flex;align-items:center;gap:clamp(1.2rem,3vw,2.6rem);flex-wrap:wrap;padding:clamp(1.4rem,2.6vw,2rem) clamp(1.3rem,4vw,3.2rem);background:var(--surround);border-top:2px solid var(--ink);margin-top:2rem;}
   .proserv{display:flex;align-items:center;gap:.85rem;text-decoration:none;color:var(--cream);border:1.6px solid #5a5142;padding:.6rem 1rem;transition:background .25s,color .25s;}
@@ -153,7 +171,7 @@
 
     <div class="eyebrow">The Game Line</div>
     <h1 class="page-title">Music Bingo</h1>
-    <p class="page-lede">Eight hundred printable bingo cards across four 50-song playlists per edition — built for hosts, bars, and trivia nights. Every square is numbered, so wins verify in seconds — no hunting across the card. Select titles add a 75-song marathon playlist with 200 more cards for a longer night. Instant download, print as many as you need.</p>
+    <p class="page-lede">Unless otherwise stated, eight hundred printable bingo cards across four 50-song playlists per edition — built for hosts, bars, and trivia nights. Every square is numbered, so wins verify in seconds — no hunting across the card. Select titles add a 75-song marathon playlist with 200 more cards for a longer night. Instant download, print as many as you need.</p>
 
     <div class="details-bar">
       <div class="detail"><span class="detail-label">Cards</span><span class="detail-value">800 per edition</span></div>
@@ -162,6 +180,26 @@
       <div class="detail"><span class="detail-label">Format</span><span class="detail-value">Printable PDF</span></div>
       <div class="detail"><span class="detail-label">Delivery</span><span class="detail-value">Instant download</span></div>
     </div>
+
+    <!-- FEATURED: Live Aid 1985 -->
+    <section class="feature" aria-label="Featured edition — Live Aid 1985">
+      <a class="feature__cover" href="https://www.etsy.com/ca/listing/4521531296/live-aid-1985-music-bingo-100-songs" target="_blank" rel="noopener" aria-label="Shop Live Aid 1985 Music Bingo on Etsy">
+        <img src="https://i.etsystatic.com/52237751/r/il/acf9b0/8181598885/il_1588xN.8181598885_k4ve.jpg" alt="Live Aid 1985 Music Bingo pack cover" loading="lazy"
+             onerror="this.style.display='none';this.parentElement.classList.add('no-img');this.parentElement.dataset.label='Cover loads on the live site';">
+      </a>
+      <div class="feature__body">
+        <span class="feature__kind"><span class="star">&#10039;</span> Featured Edition &middot; 13 July 1985</span>
+        <h2 class="feature__title">Live Aid 1985</h2>
+        <p class="feature__sub">Wembley + JFK &middot; 100 songs &middot; 2,000 cards &middot; 10 playlists</p>
+        <p class="feature__desc">On 13 July 1985, two stadiums an ocean apart — Wembley in London and JFK in Philadelphia — staged the largest concert ever attempted: sixteen hours of music, watched by nearly two billion people, to feed a famine. Every song in this deck was performed live on one of those two stages that day — Queen's era-defining set, U2's &ldquo;Bad,&rdquo; the Led Zeppelin reunion, Bowie, Madonna, Dire Straits, the Who, Elton John, Black Sabbath, and dozens more. No later hits, no filler — just the music of the day itself. At 100 songs across eight 50-song games and two 75-song Marathons, it's a double pack — <b>2,000 cards and ten playlists</b>, twice the size of a standard edition.</p>
+        <div class="feature__charity">
+          <strong>$5 from every purchase</strong> goes to the <strong>Souls Harbour Rescue Mission</strong> in Halifax, Nova Scotia, Canada — about one hot meal for a neighbour in need. Donations are made at the end of each month, based on that month's sales. Feeding people was the whole point in 1985; on this pack, it still is.
+        </div>
+        <div class="feature__ctas">
+          <a class="btn btn-primary" href="https://www.etsy.com/ca/listing/4521531296/live-aid-1985-music-bingo-100-songs" target="_blank" rel="noopener">Shop on Etsy <span class="arr">&rarr;</span></a>
+        </div>
+      </div>
+    </section>
 
     <section class="series">
       <div class="series-head">
