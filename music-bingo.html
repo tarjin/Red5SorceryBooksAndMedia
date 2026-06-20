@@ -107,6 +107,34 @@
   .btn .arr{transition:transform .3s;}
   .btn:hover .arr{transform:translateX(4px);}
 
+  /* AUDIENCE — who it's for */
+  .who{margin-top:clamp(2.6rem,5vw,4rem);}
+  .who-head{display:flex;align-items:baseline;gap:1rem;flex-wrap:wrap;border-bottom:1px solid #332c22;padding-bottom:.9rem;margin-bottom:clamp(1.4rem,2.6vw,2rem);}
+  .who-title{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(1.4rem,3vw,2.1rem);letter-spacing:.02em;color:var(--cream);}
+  .who-sub{font-family:'Special Elite',monospace;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);}
+  .who-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(244px,1fr));gap:clamp(1rem,2.4vw,1.6rem);}
+  .aud{background:var(--panel);border:1px solid #332c22;border-top:3px solid var(--gold);padding:1.5rem 1.6rem;display:flex;flex-direction:column;gap:.55rem;}
+  .aud__role{font-family:'Special Elite',monospace;font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);}
+  .aud__name{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:1.45rem;line-height:1;letter-spacing:.01em;color:var(--cream);}
+  .aud__body{color:var(--muted);font-size:.95rem;line-height:1.6;}
+  .aud__body b{color:var(--gold-soft);font-weight:700;}
+
+  /* PROOF — tested in live play */
+  .proof{margin-top:clamp(2.6rem,5vw,4rem);background:var(--panel);border:1px solid #332c22;border-left:4px solid var(--red);padding:clamp(1.6rem,3.2vw,2.4rem);}
+  .proof__eyebrow{font-family:'Special Elite',monospace;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:.6rem;}
+  .proof__eyebrow .star{color:var(--red);}
+  .proof__title{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(1.6rem,3.6vw,2.4rem);line-height:1.02;letter-spacing:.01em;color:var(--cream);margin:.4rem 0 .9rem;}
+  .proof__lead{color:var(--cream);font-size:1.02rem;line-height:1.7;max-width:66ch;margin-bottom:1.3rem;}
+  .proof__lead b{color:var(--gold-soft);font-weight:700;}
+  .proof__stats{display:flex;flex-wrap:wrap;gap:1px;background:#332c22;border:1px solid #332c22;margin-bottom:1.3rem;}
+  .stat{flex:1;min-width:118px;background:var(--panel);padding:1rem 1.2rem;}
+  .stat__num{font-family:'Anton',sans-serif;font-size:clamp(1.6rem,4vw,2.3rem);line-height:1;color:var(--gold-soft);}
+  .stat__label{display:block;font-family:'Special Elite',monospace;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:.4rem;}
+  .proof__note{font-family:'Special Elite',monospace;font-size:.92rem;line-height:1.62;color:var(--cream);border-left:3px solid var(--gold);padding-left:1rem;max-width:66ch;}
+  .proof__note b{color:var(--gold-soft);font-weight:700;}
+  .proof a{color:var(--gold-soft);text-decoration:none;border-bottom:1px solid rgba(240,196,90,.4);transition:border-color .25s;}
+  .proof a:hover{border-color:var(--gold-soft);}
+
   /* FEATURED EDITION */
   .feature{display:flex;gap:clamp(1.5rem,3.5vw,2.8rem);align-items:center;background:var(--panel);border:1px solid #332c22;border-left:4px solid var(--red);padding:clamp(1.6rem,3.2vw,2.4rem);flex-wrap:wrap;margin-top:2.4rem;}
   .feature__cover{flex:none;width:clamp(200px,30vw,248px);display:block;overflow:hidden;border:1px solid #332c22;background:#0f0d0a;text-decoration:none;}
@@ -178,9 +206,50 @@
       <div class="detail"><span class="detail-label">Cards</span><span class="detail-value">800 per edition</span></div>
       <div class="detail"><span class="detail-label">Squares</span><span class="detail-value">Numbered</span></div>
       <div class="detail"><span class="detail-label">Playlists</span><span class="detail-value">4 &times; 50 songs</span></div>
+      <div class="detail"><span class="detail-label">Marathon</span><span class="detail-value">75 songs &middot; +200 cards</span></div>
       <div class="detail"><span class="detail-label">Format</span><span class="detail-value">Printable PDF</span></div>
       <div class="detail"><span class="detail-label">Delivery</span><span class="detail-value">Instant download</span></div>
     </div>
+
+    <!-- WHO IT'S FOR -->
+    <section class="who" aria-label="Who music bingo packs are built for">
+      <div class="who-head">
+        <h2 class="who-title">Built for the Room</h2>
+        <span class="who-sub">Players &middot; hosts &middot; venues</span>
+      </div>
+      <div class="who-grid">
+        <div class="aud">
+          <span class="aud__role">For the players</span>
+          <span class="aud__name">A night, not a worksheet</span>
+          <p class="aud__body">Big, readable cards that hold up under bar lighting &mdash; <b>bold song title, artist underneath</b>. Every square is numbered, so the table can call a number across the room and help each other keep up. Fast, social, and friendly a couple of pints in.</p>
+        </div>
+        <div class="aud">
+          <span class="aud__role">For the hosts</span>
+          <span class="aud__name">A system, not a download</span>
+          <p class="aud__body">Curated, chart-authoritative themes for recurring nights &mdash; <b>800 unique cards per edition</b>, plus a <b>bonus 75-song Marathon</b> playlist with 200 more cards for the long nights, and a host guide that keeps things moving and finishing on time. The playlists and cards arrive built and ready &mdash; you just play the songs from the library you already use. No theme to research, nothing to assemble: <b>hours of prep off your plate every week</b>, and a polished, ready-to-run night you can walk into a new venue and pitch with confidence.</p>
+        </div>
+        <div class="aud">
+          <span class="aud__role">For the venues</span>
+          <span class="aud__name">A calendar, not a coin toss</span>
+          <p class="aud__body">A recurring event that draws a crowd and a tab &mdash; and a host who never scrambles for next week's theme. With a deep catalogue on the shelf, themes get <b>locked in weeks ahead</b>, so the venue can post the schedule, run the social push, and build buzz before the doors open. Clean cards with no logo on the play surface, printed to match whoever walks in.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROVEN IN LIVE PLAY -->
+    <section class="proof" aria-label="Venue-tested in live play">
+      <span class="proof__eyebrow"><span class="star">&#10039;</span> Venue-tested in live play</span>
+      <h2 class="proof__title">Proven in the Room</h2>
+      <p class="proof__lead">The <b>Canadian Signatures</b> edition made its live debut on <b>Friday, 19 June 2026</b> at the <a href="http://sommelegion.ca/" target="_blank" rel="noopener">Somme Branch Legion</a> in Dartmouth, Nova Scotia, hosted by <a href="https://www.brandonthebabe.ca/about-brandon" target="_blank" rel="noopener">Brandon &ldquo;The Babe&rdquo; Entertainment</a> &mdash; a working DJ and bingo host across the HRM &mdash; running his own night to one of the bigger crowds the room had seen. Brandon ran the pack's <b>bonus 75-song Marathon</b> playlist, the long-night option, and a hundred printed cards barely covered the floor. It ran clean all the way to a finish on <b>69 songs called</b>, ended on three tied full-card winners, and wrapped right on time. From the mic, he thanked Red5Sorcery by name &mdash; then asked for custom theme packs for future nights. One player took two cards home to show people.</p>
+      <div class="proof__stats">
+        <div class="stat"><span class="stat__num">47</span><span class="stat__label">Players in the room</span></div>
+        <div class="stat"><span class="stat__num">75</span><span class="stat__label">Songs in the Marathon</span></div>
+        <div class="stat"><span class="stat__num">69</span><span class="stat__label">Called to a finish</span></div>
+        <div class="stat"><span class="stat__num">3</span><span class="stat__label">Tied winners</span></div>
+        <div class="stat"><span class="stat__num">100</span><span class="stat__label">Cards printed</span></div>
+      </div>
+      <p class="proof__note">Two design calls proved out under real conditions: the <b>numbered squares</b> became a cross-table coordination tool players used all night, not just at verification, and the <b>title-over-artist hierarchy</b> stayed readable in low light. Designed for real hosts &mdash; not just for the download shelf.</p>
+    </section>
 
     <!-- FEATURED: Live Aid 1985 -->
     <section class="feature" aria-label="Featured edition — Live Aid 1985">
