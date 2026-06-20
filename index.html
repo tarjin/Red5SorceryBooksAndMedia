@@ -150,6 +150,21 @@
     .credits{flex-direction:column;align-items:flex-start;}
     .credits-right{margin-left:0;}
   }
+  /* ALSO FROM THE PRESS — slim sibling band beneath the three strips */
+  .also-band{display:flex;align-items:center;gap:clamp(1rem,2.4vw,2rem);flex-wrap:wrap;
+    text-decoration:none;color:var(--cream);background:#1f1b16;position:relative;
+    padding:clamp(1rem,2.2vw,1.5rem) clamp(1.3rem,4vw,3.2rem) clamp(1rem,2.2vw,1.5rem) clamp(1.6rem,4.3vw,3.5rem);
+    transition:background .3s;}
+  .also-band::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:#ff3d8a;}
+  .also-band:hover{background:#241d18;}
+  .also-band__label{display:flex;flex-direction:column;gap:.3rem;}
+  .also-band__eyebrow{font-family:'Special Elite',monospace;font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;color:#a89a7e;}
+  .also-band__name{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(1.2rem,3vw,1.9rem);line-height:1;color:#ff3d8a;letter-spacing:.02em;}
+  .also-band__tag{font-family:'Special Elite',monospace;font-size:clamp(.74rem,1.1vw,.92rem);letter-spacing:.04em;color:var(--cream);flex:1;min-width:200px;line-height:1.5;}
+  .also-band__go{font-family:'Special Elite',monospace;font-size:.82rem;letter-spacing:.22em;text-transform:uppercase;color:#ff3d8a;display:inline-flex;align-items:center;gap:.55rem;white-space:nowrap;}
+  .also-band__go .arrow{transition:transform .3s;}
+  .also-band:hover .also-band__go .arrow{transform:translateX(7px);}
+  @media(max-width:640px){.also-band{flex-direction:column;align-items:flex-start;}}
 </style>
 </head>
 <body>
@@ -164,10 +179,11 @@
         <a href="index.html">Home</a>
         <a href="black-cat-diaries.html">Black Cat Diaries</a>
         <a href="music-bingo.html">Music Bingo</a>
+        <a href="black-lab.html">Black Lab Video Cards</a>
         <a href="books.html">Books</a>
         <a href="about.html">About</a>
       </nav>
-      <p class="thesis">Art. Science. Boutique Shop.<br>One mind. <span class="star">&#10039;</span> Many facets.</p>
+      <p class="thesis">Red5Sorcery makes things for<br>safety, play <span class="star">&#10039;</span> imagination</p>
     </div>
   </header>
 
@@ -181,6 +197,15 @@
         <p class="strip__tag">Deadpan. Elegant. Judgmental.</p>
         <span class="strip__enter">Enter <span class="arrow">&rarr;</span></span>
       </div>
+    </a>
+
+    <a class="also-band also-band--instack" href="black-lab.html" aria-label="Black Lab Video Cards — Black Cat's sibling brand">
+      <span class="also-band__label">
+        <span class="also-band__eyebrow">Also from the press</span>
+        <span class="also-band__name">Black Lab Video Cards</span>
+      </span>
+      <span class="also-band__tag">Black Cat&rsquo;s loud, impatient sibling &mdash; 30-second songs that won&rsquo;t behave.</span>
+      <span class="also-band__go">Enter <span class="arrow">&rarr;</span></span>
     </a>
 
     <a class="strip strip--bingo" href="music-bingo.html" style="animation-delay:.18s;">
@@ -198,7 +223,7 @@
       <span class="strip__scrim" aria-hidden="true"></span>
       <div class="strip__text">
         <h2 class="strip__title">Strange &amp;<br>Beautiful</h2>
-        <p class="strip__tag">Books. Video cards. Things that&hellip;</p>
+        <p class="strip__tag">Books. Almanacs. Things that&hellip;</p>
         <span class="strip__enter">Enter <span class="arrow">&rarr;</span></span>
       </div>
     </a>
