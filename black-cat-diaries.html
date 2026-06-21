@@ -169,6 +169,21 @@
     .hero__text{top:auto;bottom:clamp(1.2rem,5vw,2rem);max-width:88%;}
     .credits{flex-direction:column;align-items:flex-start;}.credits-right{margin-left:0;}
   }
+  /* ALSO FROM THE PRESS — slim sibling band, matched to the index page */
+  .also-band{display:flex;align-items:center;gap:clamp(1rem,2.4vw,2rem);flex-wrap:wrap;
+    text-decoration:none;color:var(--cream);background:#1f1b16;position:relative;
+    padding:clamp(1rem,2.2vw,1.5rem) clamp(1.3rem,4vw,3.2rem) clamp(1rem,2.2vw,1.5rem) clamp(1.6rem,4.3vw,3.5rem);
+    transition:background .3s;}
+  .also-band::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:#ff3d8a;}
+  .also-band:hover{background:#241d18;}
+  .also-band__label{display:flex;flex-direction:column;gap:.3rem;}
+  .also-band__eyebrow{font-family:'Special Elite',monospace;font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;color:#a89a7e;}
+  .also-band__name{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(1.2rem,3vw,1.9rem);line-height:1;color:#ff3d8a;letter-spacing:.02em;}
+  .also-band__tag{font-family:'Special Elite',monospace;font-size:clamp(.74rem,1.1vw,.92rem);letter-spacing:.04em;color:var(--cream);flex:1;min-width:200px;line-height:1.5;}
+  .also-band__go{font-family:'Special Elite',monospace;font-size:.82rem;letter-spacing:.22em;text-transform:uppercase;color:#ff3d8a;display:inline-flex;align-items:center;gap:.55rem;white-space:nowrap;}
+  .also-band__go .arrow{transition:transform .3s;}
+  .also-band:hover .also-band__go .arrow{transform:translateX(7px);}
+  @media(max-width:640px){.also-band{flex-direction:column;align-items:flex-start;}}
 </style>
 </head>
 <body>
@@ -324,18 +339,6 @@
     </div>
   </div>
 
-  <!-- SIBLING BRAND CROSS-LINK -->
-  <div class="wrap" style="padding-top:0;">
-    <a href="black-lab.html" aria-label="Visit Black Lab Video Cards, the sibling brand"
-       style="display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap;text-decoration:none;color:inherit;border:1.6px solid #7a0f46;border-left:6px solid #ff3d8a;padding:1.2rem 1.5rem;background:rgba(255,61,138,.06);transition:background .25s,transform .25s;"
-       onmouseover="this.style.background='rgba(255,61,138,.12)';this.style.transform='translateY(-2px)';"
-       onmouseout="this.style.background='rgba(255,61,138,.06)';this.style.transform='none';">
-      <span style="font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(1.1rem,2.4vw,1.5rem);color:#ff3d8a;line-height:1;">Black Lab Video Cards</span>
-      <span style="font-family:'Special Elite',monospace;font-size:.9rem;color:#efe5cf;flex:1;min-width:220px;">Meet her loud, sarcastic sibling &mdash; 30-second video greeting cards with original songs that won&rsquo;t behave. Digital only.</span>
-      <span style="font-size:1.2rem;color:#ff3d8a;">&rarr;</span>
-    </a>
-  </div>
-
   <!-- WHERE TO FIND IT -->
   <div class="wrap" style="padding-top:0;">
     <div class="reveal">
@@ -355,6 +358,18 @@
       </div>
       <div class="divider">&#10039;</div>
     </div>
+  </div>
+
+  <!-- SIBLING BRAND CROSS-LINK -->
+  <div class="wrap" style="padding-top:0;">
+    <a class="also-band" href="black-lab.html" aria-label="Black Lab Video Cards — Black Cat's sibling brand">
+      <span class="also-band__label">
+        <span class="also-band__eyebrow">Also from the press</span>
+        <span class="also-band__name">Black Lab Video Cards</span>
+      </span>
+      <span class="also-band__tag">Black Cat&rsquo;s loud, impatient sibling &mdash; 30-second songs that won&rsquo;t behave.</span>
+      <span class="also-band__go">Enter <span class="arrow">&rarr;</span></span>
+    </a>
   </div>
 
   <!-- FOOTER -->
