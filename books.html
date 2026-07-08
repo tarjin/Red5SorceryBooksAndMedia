@@ -97,6 +97,22 @@
   .reviews-foot a{color:var(--red-bright);text-decoration:none;border-bottom:1px solid rgba(226,104,94,.4);}
   .reviews-foot a:hover{border-color:var(--red-bright);}
 
+  /* ESSAYS */
+  .essay-feature{display:flex;gap:clamp(1.6rem,4vw,3.2rem);align-items:center;background:var(--panel);border:1px solid #332c22;border-left:3px solid var(--blue);padding:clamp(1.5rem,3.2vw,2.4rem);flex-wrap:wrap;}
+  .essay-cover{flex:none;width:clamp(210px,30vw,290px);}
+  .essay-cover a{display:block;overflow:hidden;border:1px solid #332c22;background:#0b0d12;box-shadow:0 16px 36px rgba(0,0,0,.5);}
+  .essay-cover img{width:100%;height:auto;object-fit:contain;display:block;transition:transform .5s;}
+  .essay-cover a:hover img{transform:scale(1.03);}
+  .essay-body{flex:1;min-width:290px;}
+  .essay-kind{font-family:'Special Elite',monospace;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--blue-bright);}
+  .essay-title{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(1.7rem,3.6vw,2.4rem);line-height:1.02;letter-spacing:.01em;margin:.4rem 0 .15rem;}
+  .essay-sub{font-family:'Special Elite',monospace;font-size:.82rem;letter-spacing:.05em;color:var(--blue-bright);margin-bottom:.5rem;}
+  .essay-author{font-family:'Special Elite',monospace;font-size:.78rem;letter-spacing:.04em;color:var(--muted);margin-bottom:1rem;}
+  .essay-blurb{color:var(--cream);font-size:1rem;line-height:1.7;margin-bottom:1.4rem;}
+  .essay-blurb strong{color:var(--blue-bright);font-weight:700;}
+  .btn-blue{background:var(--blue);color:var(--cream);}
+  .btn-blue:hover{background:#1d4396;}
+
   /* FORTHCOMING */
   .forthcoming{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.2rem;}
   .fc-item{background:var(--panel);border:1px solid #332c22;border-left:3px solid #5a5142;padding:1.4rem 1.5rem;}
@@ -168,6 +184,34 @@
     <div class="eyebrow">Red5Sorcery Books</div>
     <h1 class="page-title">Books</h1>
     <p class="page-lede">Every book the press has put into print, in one place. From the seriousness of privacy and technology to a deadpan cat, almanacs of chart history and weather, and whatever comes next — Red5Sorcery follows the idea, not the category. The shelf is never finished, and there's always more on the way.</p>
+
+    <!-- ESSAYS -->
+    <section class="series">
+      <div class="series-head">
+        <h2 class="series-title">Essays</h2>
+        <span class="series-sub">Long-form thinking from the Red5Sorcery Council</span>
+      </div>
+
+      <div class="essay-feature">
+        <div class="essay-cover">
+          <a href="from-response-to-artifact.html" aria-label="Read From Response to Artifact">
+            <img src="from-response-to-artifact-cover.png" alt="From Response to Artifact — essay cover" loading="lazy"
+                 onerror="this.style.display='none';this.parentElement.style.background='#1f1b16';">
+          </a>
+        </div>
+        <div class="essay-body">
+          <span class="essay-kind">Essay &middot; Relational Intelligence</span>
+          <h3 class="essay-title">From Response to Artifact</h3>
+          <p class="essay-sub">Knowledge Objects, Relational Intelligence, and the Next Threshold for AI</p>
+          <p class="essay-author">By Tarjin Rahman &middot; Claude &middot; Spock &middot; Gemini &middot; The Council</p>
+          <p class="essay-blurb">Language lets intelligence participate in conversation. <strong>Knowledge objects let intelligence participate in culture.</strong> Grounded in the literacy theory of Professor David R. Olson, this Council-authored essay argues that the next threshold for AI is not better speech but the responsible creation of durable, examinable artifacts &mdash; and it is itself one such object.</p>
+          <div class="btn-row">
+            <a class="btn btn-blue" href="from-response-to-artifact.html">Read the Essay <span class="arr">&rarr;</span></a>
+            <a class="btn btn-secondary" href="From_Response_to_Artifact.pdf" target="_blank" rel="noopener">Download PDF <span class="arr">&rarr;</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- FLAGSHIP -->
     <section class="series">
