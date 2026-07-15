@@ -50,6 +50,9 @@
   .series-head{display:flex;align-items:baseline;gap:1rem;flex-wrap:wrap;border-bottom:1px solid #332c22;padding-bottom:.9rem;margin-bottom:clamp(1.4rem,2.6vw,2rem);}
   .series-title{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(1.4rem,3vw,2.1rem);letter-spacing:.02em;color:var(--cream);}
   .series-sub{font-family:'Special Elite',monospace;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);}
+  .jump-link{margin-left:auto;font-family:'Special Elite',monospace;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--blue-bright);text-decoration:none;border-bottom:1px solid transparent;transition:all .25s;white-space:nowrap;}
+  .jump-link:hover{border-bottom-color:var(--blue-bright);}
+  .series[id]{scroll-margin-top:1.5rem;}
 
   /* BOOK FEATURE */
   .book-feature{display:flex;gap:clamp(1.6rem,4vw,3.2rem);align-items:flex-start;background:var(--panel);border:1px solid #332c22;border-left:3px solid var(--red);padding:clamp(1.5rem,3.2vw,2.4rem);flex-wrap:wrap;}
@@ -193,6 +196,7 @@
       <div class="series-head">
         <h2 class="series-title">Essays</h2>
         <span class="series-sub">Long-form thinking from the Red5Sorcery Council</span>
+        <a class="jump-link" href="#the-shelf">Skip to the Books &darr;</a>
       </div>
 
       <div class="essay-feature">
@@ -260,7 +264,7 @@
     </section>
 
     <!-- FLAGSHIP -->
-    <section class="series">
+    <section class="series" id="the-shelf">
       <div class="series-head">
         <h2 class="series-title">The Flagship</h2>
         <span class="series-sub">A geometric approach to digital secrets</span>
