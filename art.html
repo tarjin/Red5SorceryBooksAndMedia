@@ -52,13 +52,14 @@
   .gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:clamp(1.2rem,2.6vw,2rem);margin-top:clamp(2rem,4vw,3rem);}
   .art-item{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease;}
   .art-item.visible{opacity:1;transform:none;}
-  .art-item__link{display:flex;flex-direction:column;background:var(--panel);border:1px solid #332c22;overflow:hidden;text-decoration:none;color:inherit;transition:transform .35s,border-color .35s,box-shadow .35s;height:100%;}
-  .art-item__link:hover{transform:translateY(-5px);border-color:var(--blue-bright);box-shadow:0 18px 40px rgba(0,0,0,.45);}
+  .art-item__card{display:flex;flex-direction:column;height:100%;background:var(--panel);border:1px solid #332c22;overflow:hidden;transition:transform .35s,border-color .35s,box-shadow .35s;}
+  .art-item__card:hover{transform:translateY(-5px);border-color:var(--blue-bright);box-shadow:0 18px 40px rgba(0,0,0,.45);}
+  .art-item__link{display:flex;flex-direction:column;flex:1;text-decoration:none;color:inherit;}
   .art-item__img{aspect-ratio:1/1;overflow:hidden;background:#f4ecda;position:relative;}
   .art-item__img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s;}
   .art-item__link:hover .art-item__img img{transform:scale(1.05);}
   .art-item__img.no-img::after{content:attr(data-label);position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:1.5rem;color:#6f6549;font-family:'Special Elite',monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;background:var(--panel);}
-  .art-item__body{padding:1.2rem 1.3rem 1.5rem;display:flex;flex-direction:column;gap:.4rem;flex:1;}
+  .art-item__body{padding:1.2rem 1.3rem 1.2rem;display:flex;flex-direction:column;gap:.4rem;flex:1;}
   .art-item__kind{font-family:'Special Elite',monospace;font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--blue-bright);}
   .art-item__title{font-family:'Archivo',sans-serif;font-weight:700;font-size:1.2rem;line-height:1.22;letter-spacing:.005em;color:var(--cream);}
   .art-item__caption{font-family:'Special Elite',monospace;color:var(--muted);font-size:.92rem;line-height:1.5;flex:1;}
@@ -66,6 +67,19 @@
   .art-item__link:hover .art-item__cta{color:var(--blue-bright);}
   .art-item__cta .arr{transition:transform .3s;}
   .art-item__link:hover .art-item__cta .arr{transform:translateX(5px);}
+
+  /* Watch-the-video button (sits outside the Etsy link, inside the card) */
+  .art-item__actions{padding:0 1.3rem 1.4rem;}
+  .art-item__watch{display:flex;align-items:center;justify-content:center;gap:.6rem;padding:.62rem .9rem;border:1.6px solid #5a5142;text-decoration:none;color:var(--cream);font-family:'Special Elite',monospace;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;transition:background .25s,color .25s,border-color .25s;}
+  .art-item__watch:hover{background:var(--cream);color:var(--ink);border-color:var(--cream);}
+  .art-item__watch .play{color:var(--red);font-size:.72rem;line-height:1;}
+  .art-item__link:focus-visible,.art-item__watch:focus-visible{outline:2px solid var(--blue-bright);outline-offset:3px;}
+
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    *{transition:none!important;animation:none!important;}
+    .art-item{opacity:1!important;transform:none!important;}
+  }
 
   .coming-soon{margin-top:clamp(2rem,4vw,3rem);padding:1.6rem 1.8rem;border:1px dashed #4a4234;color:var(--muted);font-size:.98rem;text-align:center;}
   .coming-soon strong{color:var(--cream);font-weight:700;}
@@ -156,7 +170,9 @@
   /* ==========================================================
      BLACK CAT DIARIES ART CATALOGUE
      To add a piece, append an object below.
-     Fields: image, kind, title, etsyUrl, (optional) caption
+     Fields: image, kind, title, etsyUrl, (optional) caption, (optional) videoUrl
+     A videoUrl adds a "Watch the video" button. Any YouTube URL works —
+     it gets rewritten to start the video at 0 seconds.
      ========================================================== */
   const ART = [
     {
@@ -164,11 +180,28 @@
       kind: "Canvas Art",
       title: "Wine Night",
       caption: "Bring gossip. Leave judgment. Gallery-wrapped canvas, ready to hang.",
-      etsyUrl: "https://www.etsy.com/ca/listing/4521418713/black-cat-diaries-wine-night-canvas-art"
+      etsyUrl: "https://www.etsy.com/ca/listing/4521418713/black-cat-diaries-wine-night-canvas-art",
+      videoUrl: "https://youtu.be/ZbCXFN8VNDM"
     }
   ];
 
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+  /* Rebuild any YouTube URL as a clean watch link pinned to 0s,
+     so it never resumes mid-video or carries a share/tracking tag. */
+  const ytFromStart = u => {
+    try{
+      const url = new URL(u);
+      const host = url.hostname.replace(/^www\./,'');
+      let id = '';
+      if(host === 'youtu.be') id = url.pathname.slice(1);
+      else if(host.endsWith('youtube.com')){
+        id = url.searchParams.get('v') || url.pathname.split('/').filter(Boolean).pop() || '';
+      }
+      if(!/^[A-Za-z0-9_-]{6,}$/.test(id)) return u;
+      return `https://www.youtube.com/watch?v=${id}&t=0s`;
+    }catch(e){ return u; }
+  };
 
   (function(){
     const grid = document.getElementById('galleryGrid');
@@ -177,19 +210,28 @@
       const el = document.createElement('article');
       el.className = 'art-item';
       const cap = item.caption ? `<p class="art-item__caption">${esc(item.caption)}</p>` : '';
+      const watch = item.videoUrl ? `
+          <div class="art-item__actions">
+            <a class="art-item__watch" href="${esc(ytFromStart(item.videoUrl))}" target="_blank" rel="noopener"
+               aria-label="Watch the ${esc(item.title)} video on YouTube">
+              <span class="play" aria-hidden="true">&#9654;</span> Watch the video
+            </a>
+          </div>` : '';
       el.innerHTML = `
-        <a class="art-item__link" href="${esc(item.etsyUrl)}" target="_blank" rel="noopener" aria-label="Shop ${esc(item.title)} on Etsy">
-          <div class="art-item__img">
-            <img src="${esc(item.image)}" alt="${esc(item.title)} — Black Cat Diaries art" loading="lazy"
-                 onerror="this.style.display='none';this.parentElement.classList.add('no-img');this.parentElement.dataset.label='Product image loads on the live site';">
-          </div>
-          <div class="art-item__body">
-            <span class="art-item__kind">${esc(item.kind)}</span>
-            <h3 class="art-item__title">${esc(item.title)}</h3>
-            ${cap}
-            <span class="art-item__cta">Shop on Etsy <span class="arr">&rarr;</span></span>
-          </div>
-        </a>`;
+        <div class="art-item__card">
+          <a class="art-item__link" href="${esc(item.etsyUrl)}" target="_blank" rel="noopener" aria-label="Shop ${esc(item.title)} on Etsy">
+            <div class="art-item__img">
+              <img src="${esc(item.image)}" alt="${esc(item.title)} — Black Cat Diaries art" loading="lazy"
+                   onerror="this.style.display='none';this.parentElement.classList.add('no-img');this.parentElement.dataset.label='Product image loads on the live site';">
+            </div>
+            <div class="art-item__body">
+              <span class="art-item__kind">${esc(item.kind)}</span>
+              <h3 class="art-item__title">${esc(item.title)}</h3>
+              ${cap}
+              <span class="art-item__cta">Shop on Etsy <span class="arr">&rarr;</span></span>
+            </div>
+          </a>${watch}
+        </div>`;
       grid.appendChild(el);
     });
 
