@@ -62,6 +62,10 @@
   .maker__photo img{width:100%;height:100%;object-fit:cover;display:block;}
   .maker__photo .frame.no-photo::after{content:"TR";position:absolute;inset:0;display:grid;place-items:center;font-family:'Anton',sans-serif;font-size:3rem;color:#5a5142;}
   .maker__photo figcaption{font-family:'Special Elite',monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:center;margin-top:.7rem;}
+  .maker__listen{display:flex;align-items:center;justify-content:center;gap:.55rem;margin-top:.9rem;padding:.7rem .75rem;border:1.5px solid #5a5142;color:var(--cream);text-decoration:none;font-family:'Special Elite',monospace;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;line-height:1.2;transition:background .25s,color .25s,border-color .25s;}
+  .maker__listen:hover{background:var(--cream);color:var(--ink);border-color:var(--cream);}
+  .maker__listen .play{color:var(--red);font-size:.62rem;line-height:1;}
+  .maker__listen-note{display:block;font-family:'Special Elite',monospace;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:center;margin-top:.5rem;line-height:1.4;}
   .maker__body{flex:1;min-width:300px;}
   .maker__name{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(1.8rem,4vw,2.6rem);line-height:1;letter-spacing:.01em;margin-bottom:1rem;}
   .maker__body p{color:var(--soft);font-size:1.05rem;line-height:1.78;margin-bottom:1.1rem;}
@@ -187,6 +191,10 @@
                  onerror="this.style.display='none';this.parentElement.classList.add('no-photo');">
           </div>
           <figcaption>Tarjin Rahman &middot; Halifax</figcaption>
+          <a class="maker__listen" href="https://www.youtube.com/watch?v=EEG2SlpOwK8&amp;t=0s" target="_blank" rel="noopener">
+            <span class="play">&#9654;</span> Audio Overview
+          </a>
+          <span class="maker__listen-note">Listen on YouTube</span>
         </figure>
         <div class="maker__body">
           <h3 class="maker__name">Tarjin Rahman</h3>
