@@ -118,7 +118,7 @@
   .cartoon-cap .day{display:block;color:var(--blue-bright);margin-bottom:.3rem;font-size:.9rem;}
 
   /* ---------- TILES (cards + art) ---------- */
-  .tiles{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.2rem,3vw,2.2rem);margin-top:2.2rem;}
+  .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:clamp(1.2rem,3vw,2.2rem);margin-top:2.2rem;}
   @media(max-width:720px){.tiles{grid-template-columns:1fr;}}
   .tile{background:var(--panel);border:1px solid #332c22;overflow:hidden;display:flex;flex-direction:column;transition:transform .35s,border-color .35s;text-decoration:none;color:inherit;}
   .tile:hover{transform:translateY(-4px);border-color:var(--blue-bright);}
@@ -323,6 +323,15 @@
             <div class="tile__name">The Cards</div>
             <div class="tile__kicker">For Every Occasion</div>
             <p class="tile__desc">The cat steps off the page and onto your mantelpiece. A2 greeting cards, sold in packs of ten — drawings you won&rsquo;t find in the books or the daily cartoons. New cards are added regularly to suit any occasion, with invitation cards a growing favourite.</p>
+            <span class="tile__more">View the Series &rarr;</span>
+          </div>
+        </a>
+        <a class="tile" href="printable-cards.html">
+          <div class="tile__img"><img src="https://i.etsystatic.com/52237751/r/il/a5dfde/8373821651/il_1588xN.8373821651_8tcb.jpg" alt="Black Cat Diaries digital printable card"></div>
+          <div class="tile__body">
+            <div class="tile__name">The Printables</div>
+            <div class="tile__kicker">Digital Printable Cards</div>
+            <p class="tile__desc">The same cat, delivered instantly. Digital downloads you print yourself &mdash; folded A2 cards, laid out two-up on letter paper, ready the moment you buy them. For the invitation you needed yesterday.</p>
             <span class="tile__more">View the Series &rarr;</span>
           </div>
         </a>
