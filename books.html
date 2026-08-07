@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<!-- Updated August 6, 2026: added The Thursday Rotation Issue 004. -->
+<!-- Updated August 7, 2026: added the Beyond the Prompt series with Episode 001. -->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Library — Red5Sorcery</title>
-<meta name="description" content="The Red5Sorcery library — RQSM Letters, The Thursday Rotation, Council Notes essays and podcasts, and books in print and digital. Follows the idea, not the category.">
+<meta name="description" content="The Red5Sorcery library — Beyond the Prompt, RQSM Letters, The Thursday Rotation, Council Notes essays and podcasts, and books in print and digital. Follows the idea, not the category.">
 <meta property="og:title" content="Library — Red5Sorcery">
-<meta property="og:description" content="RQSM Letters, essays, podcasts, The Thursday Rotation, and books from a boutique press in Halifax. Red5Sorcery follows the idea, not the category.">
+<meta property="og:description" content="Beyond the Prompt, RQSM Letters, essays, podcasts, The Thursday Rotation, and books from a boutique press in Halifax. Red5Sorcery follows the idea, not the category.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -121,6 +121,14 @@
   .btn-podcast{border:1.5px solid #5a5142;color:var(--cream);}
   .btn-podcast:hover{background:var(--blue);border-color:var(--blue);color:var(--cream);}
 
+  /* BEYOND THE PROMPT */
+  .essay-feature--prompt{border-left-color:var(--gold);}
+  .essay-feature--prompt .essay-kind,.essay-feature--prompt .essay-sub{color:var(--gold);}
+  .essay-feature--prompt .essay-blurb strong{color:var(--gold);}
+  .btn-gold{background:var(--gold);color:var(--ink);}
+  .btn-gold:hover{background:#f2ba2c;}
+  .btn-podcast--prompt:hover{background:var(--gold);border-color:var(--gold);color:var(--ink);}
+
   /* RQSM LETTERS */
   .essay-feature--letter{border-left-color:var(--red);}
   .essay-feature--letter .essay-kind,.essay-feature--letter .essay-sub{color:var(--red-bright);}
@@ -200,7 +208,36 @@
 
     <div class="eyebrow">Red5Sorcery Library</div>
     <h1 class="page-title">Library</h1>
-    <p class="page-lede">The Red5Sorcery library — everything worth sitting down with. Three strands of Council writing anchor it, each with a companion podcast: <strong>RQSM Letters</strong>, one letter written to one person and mailed every Saturday, then published in full; <strong>The Thursday Rotation</strong>, a Canada-first music recap that lands every week; and <strong>Council Notes</strong>, an unhurried deep dive into the architecture of a single song, on no set schedule — published whenever one earns it. Then the published shelf: books in print and digital editions — privacy and technology, a deadpan cat, music chart history, weather almanacs, and whatever comes next.</p>
+    <p class="page-lede">The Red5Sorcery library — everything worth sitting down with. Four strands of writing anchor it, each with a companion podcast: <strong>Beyond the Prompt</strong>, the informal one — Spock and Tarjin musing on whatever they have been reading, published whenever an idea is worth chasing; <strong>RQSM Letters</strong>, one letter written to one person and mailed every Saturday, then published in full; <strong>The Thursday Rotation</strong>, a Canada-first music recap that lands every week; and <strong>Council Notes</strong>, an unhurried deep dive into the architecture of a single song, on no set schedule — published whenever one earns it. Then the published shelf: books in print and digital editions — privacy and technology, a deadpan cat, music chart history, weather almanacs, and whatever comes next.</p>
+
+    <!-- BEYOND THE PROMPT -->
+    <section class="series" id="beyond-the-prompt">
+      <div class="series-head">
+        <h2 class="series-title">Beyond the Prompt</h2>
+        <span class="series-sub">Musings &amp; thinking out loud &middot; no set schedule</span>
+        <a class="jump-link" href="#the-shelf">Skip to the Books &darr;</a>
+      </div>
+
+      <div class="essay-feature essay-feature--prompt">
+        <div class="essay-cover">
+          <a href="https://drive.google.com/file/d/14pYXB6LH2taroScPhY29Zcj5kJZiWUUW/view?usp=drive_link" target="_blank" rel="noopener" aria-label="Read Beyond Cognitive Offloading">
+            <img src="https://drive.google.com/thumbnail?id=1i0ovYuH8BYkFNSYB1jiCvI06dEL54n8W&sz=w1000" alt="Beyond the Prompt — Episode 001 — Beyond Cognitive Offloading — cover" loading="lazy"
+                 onerror="this.style.display='none';this.parentElement.style.background='#1f1b16';">
+          </a>
+        </div>
+        <div class="essay-body">
+          <span class="essay-kind">Musings &middot; Episode 001</span>
+          <h3 class="essay-title">Beyond Cognitive Offloading</h3>
+          <p class="essay-author">By Tarjin Rahman &middot; Spock &middot; Audio by Gemini</p>
+          <p class="essay-blurb">The first episode of an informal series &mdash; <strong>Spock and Tarjin</strong> thinking out loud about whatever they have been reading or been inspired by, wherever it happens to lead. This one starts with <strong>cognitive offloading</strong>: the worry that handing work to a machine hollows out the thinking that used to be yours. Read the article, or listen to the conversation, produced as an audio overview by Gemini.</p>
+          <div class="btn-row">
+            <a class="btn btn-gold" href="https://drive.google.com/file/d/14pYXB6LH2taroScPhY29Zcj5kJZiWUUW/view?usp=drive_link" target="_blank" rel="noopener">Read the Article <span class="arr">&rarr;</span></a>
+            <a class="btn btn-secondary" href="https://drive.google.com/uc?export=download&id=14pYXB6LH2taroScPhY29Zcj5kJZiWUUW" target="_blank" rel="noopener">Download PDF <span class="arr">&rarr;</span></a>
+            <a class="btn btn-podcast btn-podcast--prompt" href="https://www.youtube.com/watch?v=8AvqSHnMaEs&amp;t=0s" target="_blank" rel="noopener" aria-label="Listen to Beyond the Prompt Episode 001 podcast on YouTube">&#9654;&nbsp; Listen to the Podcast <span class="arr">&rarr;</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- RQSM LETTERS -->
     <section class="series" id="rqsm-letters">
