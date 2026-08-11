@@ -5,9 +5,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Library — Red5Sorcery</title>
-<meta name="description" content="The Red5Sorcery library — Beyond the Prompt, RQSM Letters, The Thursday Rotation, Council Notes essays and podcasts, and books in print and digital. Follows the idea, not the category.">
+<meta name="description" content="The Red5Sorcery library — The Product Management Diary, Beyond the Prompt, RQSM Letters, The Thursday Rotation, Council Notes essays and podcasts, and books in print and digital. Follows the idea, not the category.">
 <meta property="og:title" content="Library — Red5Sorcery">
-<meta property="og:description" content="Beyond the Prompt, RQSM Letters, essays, podcasts, The Thursday Rotation, and books from a boutique press in Halifax. Red5Sorcery follows the idea, not the category.">
+<meta property="og:description" content="The Product Management Diary, Beyond the Prompt, RQSM Letters, essays, podcasts, The Thursday Rotation, and books from a boutique press in Halifax. Red5Sorcery follows the idea, not the category.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,6 +16,7 @@
   :root{
     --surround:#181511;--panel:#1f1b16;--cream:#efe5cf;--ink:#14110c;
     --blue:#16357c;--blue-bright:#7e9fe6;--muted:#a89a7e;--gold:#e0a51a;--red:#a8261f;--red-bright:#e2685e;
+    --teal:#1c5f66;--teal-bright:#6fc3cb;
   }
   *{box-sizing:border-box;margin:0;padding:0;}
   html{scroll-behavior:smooth;}
@@ -121,6 +122,15 @@
   .btn-podcast{border:1.5px solid #5a5142;color:var(--cream);}
   .btn-podcast:hover{background:var(--blue);border-color:var(--blue);color:var(--cream);}
 
+  /* THE PRODUCT MANAGEMENT DIARY */
+  .essay-feature--diary{border-left-color:var(--teal);}
+  .essay-feature--diary .essay-kind,.essay-feature--diary .essay-sub{color:var(--teal-bright);}
+  .essay-feature--diary .essay-blurb strong{color:var(--teal-bright);}
+  .btn-teal{background:var(--teal);color:var(--cream);}
+  .btn-teal:hover{background:#25808a;}
+  .btn-podcast--diary:hover{background:var(--teal);border-color:var(--teal);color:var(--cream);}
+  .diary-promise{font-family:'Special Elite',monospace;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-bright);border-left:2px solid var(--teal);padding-left:.95rem;margin-bottom:1.2rem;}
+
   /* BEYOND THE PROMPT */
   .essay-feature--prompt{border-left-color:var(--gold);}
   .essay-feature--prompt .essay-kind,.essay-feature--prompt .essay-sub{color:var(--gold);}
@@ -209,7 +219,36 @@
 
     <div class="eyebrow">Red5Sorcery Library</div>
     <h1 class="page-title">Library</h1>
-    <p class="page-lede">The Red5Sorcery library — everything worth sitting down with. Four strands of writing anchor it, each with a companion podcast: <strong>Beyond the Prompt</strong>, the informal one — Spock and Tarjin musing on whatever they have been reading, published whenever an idea is worth chasing; <strong>RQSM Letters</strong>, one letter written to one person and mailed when one earns it, then published in full; <strong>The Thursday Rotation</strong>, a Canada-first music recap that lands every week; and <strong>Council Notes</strong>, an unhurried deep dive into the architecture of a single song, on no set schedule — published whenever one earns it. Then the published shelf: books in print and digital editions — privacy and technology, a deadpan cat, music chart history, weather almanacs, and whatever comes next.</p>
+    <p class="page-lede">The Red5Sorcery library — everything worth sitting down with. Five strands of writing anchor it, each with a companion podcast: <strong>The Product Management Diary</strong>, the behind-the-scenes record of a Red5Sorcery data engineering product being built and brought to market in the open; <strong>Beyond the Prompt</strong>, the informal one — Spock and Tarjin musing on whatever they have been reading, published whenever an idea is worth chasing; <strong>RQSM Letters</strong>, one letter written to one person and mailed when one earns it, then published in full; <strong>The Thursday Rotation</strong>, a Canada-first music recap that lands every week; and <strong>Council Notes</strong>, an unhurried deep dive into the architecture of a single song, on no set schedule — published whenever one earns it. Then the published shelf: books in print and digital editions — privacy and technology, a deadpan cat, music chart history, weather almanacs, and whatever comes next.</p>
+
+    <!-- THE PRODUCT MANAGEMENT DIARY -->
+    <section class="series" id="product-management-diary">
+      <div class="series-head">
+        <h2 class="series-title">The Product Management Diary</h2>
+        <span class="series-sub">Bringing a data engineering product to market &middot; a development diary</span>
+        <a class="jump-link" href="#the-shelf">Skip to the Books &darr;</a>
+      </div>
+
+      <div class="essay-feature essay-feature--diary">
+        <div class="essay-cover">
+          <a href="https://www.youtube.com/watch?v=oCNvoBYCVYY&amp;t=0s" target="_blank" rel="noopener" aria-label="Listen to The Product Management Diary, Day 001, on YouTube">
+            <img src="https://drive.google.com/thumbnail?id=1manRcuoC8hwmKZVH8TNRusFy1U8antf7&sz=w1000" alt="The Product Management Diary — Day 001 — cover" loading="lazy"
+                 onerror="this.style.display='none';this.parentElement.style.background='#1f1b16';">
+          </a>
+        </div>
+        <div class="essay-body">
+          <span class="essay-kind">Development Diary &middot; Day 001</span>
+          <h3 class="essay-title">Day 001</h3>
+          <p class="essay-sub">Bringing a Red5Sorcery Data Engineering Product to Market</p>
+          <p class="essay-author">By Tarjin Rahman &middot; The Council &middot; Audio by Gemini</p>
+          <p class="diary-promise">Free &middot; Fast &middot; Private &middot; Pretty</p>
+          <p class="essay-blurb">What does it actually look like to bring a software product to market with a <strong>Council of AIs</strong>? Day 001 begins the behind-the-scenes development diary of a Red5Sorcery data engineering product: a <strong>local-first Rust application</strong> designed around a simple promise &mdash; <strong>Free. Fast. Private. Pretty.</strong></p>
+          <div class="btn-row">
+            <a class="btn btn-teal" href="https://www.youtube.com/watch?v=oCNvoBYCVYY&amp;t=0s" target="_blank" rel="noopener" aria-label="Listen to The Product Management Diary, Day 001, podcast on YouTube">&#9654;&nbsp; Listen to the Podcast <span class="arr">&rarr;</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- BEYOND THE PROMPT -->
     <section class="series" id="beyond-the-prompt">
